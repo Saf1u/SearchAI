@@ -1,4 +1,3 @@
-
 from copy import deepcopy
 from queue import PriorityQueue
 
@@ -48,18 +47,15 @@ class gamePlayer:
     def play(self):
         while not self.openList.empty():
             currentState = self.openList.get()
-            writeToSearch(currentState.costOfMove,currentState.costOfMove,0,currentState.stringRep,printFuel(currentState.fuelOfCars))
             if currentState.solution():
                 return currentState
             marked = {}
             reOrder = False
             getRidOf = {}
-            self.closedList[currentState.stringRep] = True
+            self.closedList[currentState.stringRep] = currentState
             if currentState.stringRep in self.openListTracker:
                 del self.openListTracker[currentState.stringRep]
             newStates = []
-            # print('----start----')
-            # prettyPrint(currentState.gameboard)
             for i in range(0, 6):
                 for j in range(0, 6):
                     if currentState.gameboard[i][j] not in marked:
@@ -80,16 +76,12 @@ class gamePlayer:
                                     coordinates = locateFrontAndBack(temp, i, j + (start - 1))
                                     temp = moveRight(temp, coordinates[0], coordinates[1])
                                     message = currentState.gameboard[i][j] + ' ' + 'right' + ' ' + str(start)
-                                    # print('---right--', i, j)
-                                    # prettyPrint(temp)
                                 else:
                                     if temp[i + (start - 1)][j] == '.':
                                         break
                                     coordinates = locateFrontAndBack(temp, i + (start - 1), j)
                                     temp = moveDown(temp, coordinates[0], coordinates[1])
                                     message = currentState.gameboard[i][j] + ' ' + 'down' + ' ' + str(start)
-                                    # print('--down---', i, j)
-                                    # prettyPrint(temp)
                                 fuelCopy = currentState.fuelOfCars.copy()
                                 fuelCopy[currentState.gameboard[i][j]] -= start
                                 newState = stateSpace(temp, fuelCopy, 1 + currentState.costOfMove, message,
@@ -99,7 +91,6 @@ class gamePlayer:
                                     if newState.stringRep in self.openListTracker and self.openListTracker[
                                         newState.stringRep] > newState.costOfMove:
                                         newStates.append(newState)
-                                        prettyPrint(newState.gameboard)
                                         reOrder = True
                                         getRidOf[newState.stringRep] = True
                                     elif newState.stringRep not in self.openListTracker:
@@ -114,21 +105,17 @@ class gamePlayer:
                             while start <= currentState.fuelOfCars[currentState.gameboard[i][j]] and start <= steps:
                                 message = ''
                                 if axis == 'left':
-                                    if temp[i][j-(start-1)] == '.':
+                                    if temp[i][j - (start - 1)] == '.':
                                         break
-                                    coordinates = locateFrontAndBack(temp, i, j-(start-1))
+                                    coordinates = locateFrontAndBack(temp, i, j - (start - 1))
                                     temp = moveLeft(temp, coordinates[0], coordinates[1])
                                     message = currentState.gameboard[i][j] + ' ' + 'left' + ' ' + str(start)
-                                    # print('----left----', i, j)
-                                    # prettyPrint(temp)
                                 else:
-                                    if temp[i-(start-1)][j] == '.':
+                                    if temp[i - (start - 1)][j] == '.':
                                         break
-                                    coordinates = locateFrontAndBack(temp, i-(start-1), j)
+                                    coordinates = locateFrontAndBack(temp, i - (start - 1), j)
                                     temp = moveUp(temp, coordinates[0], coordinates[1])
                                     message = currentState.gameboard[i][j] + ' ' + 'up' + ' ' + str(start)
-                                    # print('----up----', i, j, str(start))
-                                    # prettyPrint(temp)
                                 fuelCopy = currentState.fuelOfCars.copy()
                                 fuelCopy[currentState.gameboard[i][j]] -= start
                                 newState = stateSpace(temp, fuelCopy, 1 + currentState.costOfMove, message,
@@ -152,8 +139,6 @@ class gamePlayer:
                         del self.openListTracker[oldState.stringRep]
                     else:
                         oldStates.append(oldState)
-            newStates.reverse()
-            oldStates.reverse()
             for state in oldStates:
                 self.openList.put(state)
             for state in newStates:
@@ -288,9 +273,6 @@ def moveDown(container, head, tail):
     state = deepcopy(container)
     state[tail[0] + 1][tail[1]] = state[tail[0]][tail[1]]
     state[head[0]][head[1]] = '.'
-    # if tail[0] + 1 == 2 and (tail[1]) == 5 and state[tail[0] + 1][tail[1]] != 'A':
-    #     for y in range(head[0], 3):
-    #         state[y][head[1]] = '.'
     return state
 
 
@@ -299,46 +281,48 @@ def moveUp(container, head, tail):
     state = deepcopy(container)
     state[head[0] - 1][head[1]] = state[head[0]][head[1]]
     state[tail[0]][tail[1]] = '.'
-    # if head[0] - 1 == 2 and (head[1]) == 5 and state[head[0] - 1][head[1]] != 'A':
-    #     for y in range(2, tail[0] + 1):
-    #         state[y][head[1]] = '.'
     return state
 
-def writeToSearch(totalCost,searchCost,heurisitcCost,board,fuels):
-    res=str(totalCost)+' '+' '+str(searchCost)+' '+str(heurisitcCost)+' '+board+fuels+'\n'
+
+def writeToSearch(totalCost, searchCost, heurisitcCost, board, fuels):
+    res = str(totalCost) + ' ' + ' ' + str(searchCost) + ' ' + str(heurisitcCost) + ' ' + board + fuels + '\n'
     with open("search-path.txt", "a") as myfile:
         myfile.write(res)
-
 
 
 def prettyPrint(container):
     for row in container:
         print(row)
         print()
+
+
 def printFuel(fuels):
-    strRep=''
+    strRep = ''
     for car in fuels:
-     if not (fuels[car]==100):
-        strRep+=' '+car+str(fuels[car])
+        if not (fuels[car] == 100):
+            strRep += ' ' + car + str(fuels[car])
     return strRep
 
 
 if __name__ == '__main__':
-    game = "BB.G.HE..G.HEAAG.I..FCCIDDF..I..F..."
-          # "JBBCCCJDD..MJAAL.MFFKL.N..KGGN.HH..."
-    #game="IIB...C.BHHHC.AAD.....D.EEGGGF.....F"
-    #game ="C.B...C.BHHHAADD........EEGGGF.....F"
-    #game  ="...GF...BGF.AABCF....CDD...C....EE.."
+    game = "JBBCCCJDD..MJAAL.MFFKL.N..KGGN.HH..."
+    # "JBBCCCJDD..MJAAL.MFFKL.N..KGGN.HH..."
+    # game="IIB...C.BHHHC.AAD.....D.EEGGGF.....F"
+    # game ="C.B...C.BHHHAADD........EEGGGF.....F"
+    # game  ="...GF...BGF.AABCF....CDD...C....EE.."
     newGame = gamePlayer(game, initalFuel=getFuel(game))
     win = newGame.play()
-    fuel=0
-    count=0
-    while not win == None:
-     #prettyPrint(win.gameboard)
-     print('-------------')
-     print(win.carMovedWithDirection)
-     win = win.parent
-     count+=1
-    count-=1
-    print(count)
-    print(fuel)
+    for k,value in newGame.closedList.items():
+        writeToSearch(value.costOfMove, value.costOfMove, 0, value.stringRep,
+                  printFuel(value.fuelOfCars))
+    # fuel = 0
+    # count = 0
+    # while not win == None:
+    #     # prettyPrint(win.gameboard)
+    #     print('-------------')
+    #     print(win.carMovedWithDirection)
+    #     win = win.parent
+    #     count += 1
+    # count -= 1
+    # print(count)
+    # print(fuel)
