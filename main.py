@@ -8,9 +8,6 @@ def noHeuristic(x):
 
 
 class stateSpace:
-    # gameState =[["." for x in range(6)] for y in range(6)]
-    # costs={}
-    # currentCost=0
     def __init__(self, gameboard, fuelOfCars, costOfMove, heuristicCost, carMovedWithDirection, parent, carMoved):
         self.gameboard = gameboard
         self.fuelOfCars = fuelOfCars
@@ -88,7 +85,7 @@ class gamePlayer:
                 myFile.write('Car fuel available: ' + self.startingFuel)
                 myFile.write('\n')
                 myFile.write('\n')
-                myFile.write('Runtime:' + str(self.timing))
+                myFile.write('Runtime:' + str(self.timing)+'seconds')
                 myFile.write('\n')
                 myFile.write('\n')
                 myFile.write('Search path length:' + str(len(self.closedList)))
@@ -161,7 +158,7 @@ class gamePlayer:
                                         break
                                     coordinates = locateFrontAndBack(temp, i + (start - 1), j)
                                     temp = moveDown(temp, coordinates[0], coordinates[1])
-                                    message = currentState.gameboard[i][j] + ' ' + 'down' + ' ' + str(start)
+                                    message = currentState.gameboard[i][j] + ' ' + 'down ' + ' ' + str(start)
                                 fuelCopy = currentState.fuelOfCars.copy()
                                 fuelCopy[currentState.gameboard[i][j]] -= start
                                 newState = stateSpace(temp, fuelCopy, 1 + currentState.costOfMove, heuristicCost,
@@ -191,13 +188,13 @@ class gamePlayer:
                                         break
                                     coordinates = locateFrontAndBack(temp, i, j - (start - 1))
                                     temp = moveLeft(temp, coordinates[0], coordinates[1])
-                                    message = currentState.gameboard[i][j] + ' ' + 'left' + ' ' + str(start)
+                                    message = currentState.gameboard[i][j] + ' ' + 'left ' + ' ' + str(start)
                                 else:
                                     if temp[i - (start - 1)][j] == '.':
                                         break
                                     coordinates = locateFrontAndBack(temp, i - (start - 1), j)
                                     temp = moveUp(temp, coordinates[0], coordinates[1])
-                                    message = currentState.gameboard[i][j] + ' ' + 'up' + ' ' + str(start)
+                                    message = currentState.gameboard[i][j] + ' ' + 'up   ' + ' ' + str(start)
                                 fuelCopy = currentState.fuelOfCars.copy()
                                 fuelCopy[currentState.gameboard[i][j]] -= start
                                 newState = stateSpace(temp, fuelCopy, 1 + currentState.costOfMove, heuristicCost,
@@ -385,7 +382,7 @@ def getFormattedFuel(fuels):
 
 
 if __name__ == '__main__':
-    game = "JBBCCCJDD..MJAAL.MFFKL.N..KGGN.HH..."
+    game = "BBIJ....IJCC..IAAMGDDK.MGH.KL.GHFFL."
 
     newGame = gamePlayer(PriorityQueue(), game, getFuel(game), noHeuristic)
     newGame.play()
