@@ -1,17 +1,25 @@
+import datetime
 from copy import deepcopy
 from queue import PriorityQueue
+
+
+def noHeuristic(x):
+    return 0
 
 
 class stateSpace:
     # gameState =[["." for x in range(6)] for y in range(6)]
     # costs={}
     # currentCost=0
-    def __init__(self, gameboard, fuelOfCars, costOfMove, carMovedWithDirection, parent):
+    def __init__(self, gameboard, fuelOfCars, costOfMove, heuristicCost, carMovedWithDirection, parent, carMoved):
         self.gameboard = gameboard
         self.fuelOfCars = fuelOfCars
         self.costOfMove = costOfMove
+        self.heuristicCost = heuristicCost
+        self.combinedCost = costOfMove + heuristicCost
         self.carMovedWithDirection = carMovedWithDirection
         self.stringRep = ''.join([item for innerlist in gameboard for item in innerlist])
+        self.moved = carMoved
         self.parent = parent
 
     def __eq__(self, other):
@@ -32,23 +40,94 @@ class stateSpace:
             return False
 
 
+def writeToSearch(totalCost, searchCost, heurisitcCost, board, fuels, name, number):
+    res = str(totalCost) + ' ' + ' ' + str(searchCost) + ' ' + str(heurisitcCost) + ' ' + board + fuels + '\n'
+    with open(name + "-search-" + str(number) + ".txt", "a+") as myfile:
+        myfile.write(res)
+
+
 class gamePlayer:
-    def __init__(self, gameString, initalFuel):
+    def __init__(self, dataStructure, gameString, initalFuel, heuristic):
         gameState = [["." for x in range(6)] for y in range(6)]
         for i in range(0, 6):
             for j in range(0, 6):
                 gameState[i][j] = gameString[j + (6 * i)]
-        init = stateSpace(gameState, initalFuel, 0, "none", None)
-        self.openList = PriorityQueue()
+        init = stateSpace(gameState, initalFuel, 0, 0, "none", None, ' ')
+        self.openList = dataStructure
         self.openList.put(init)
+        self.heuristic = heuristic
         self.openListTracker = {init.stringRep: init.costOfMove}
         self.closedList = {}
+        self.timing = 0
+        strRep = 'Car fuel available: '
+        for car in initalFuel:
+            strRep += car + ':' + str(initalFuel[car]) + ", "
+
+        self.startingFuel = strRep
+        self.winner = None
+
+    def writeToSolution(self, name, number):
+        if self.winner is None:
+            with open(name + "-search-" + str(number) + ".txt", "a+") as myFile:
+                myFile.write("no solution")
+        else:
+            searchPath = []
+            win = self.winner
+            count = 0
+            while win is not None:
+                searchPath.append(win)
+                win = win.parent
+
+            searchPath.reverse()
+            with open(name + "-SOL-" + str(number) + ".txt", "a+") as myFile:
+                myFile.write("--------------------------------------------------------------------------------")
+                myFile.write("Initial board configuration: " + searchPath[0].stringRep)
+                myFile.write('\n')
+                myFile.write('\n')
+                myFile.write(prettyPrint(searchPath[0].gameboard))
+                myFile.write('Car fuel available: ' + self.startingFuel)
+                myFile.write('\n')
+                myFile.write('\n')
+                myFile.write('Runtime:' + str(self.timing))
+                myFile.write('\n')
+                myFile.write('\n')
+                myFile.write('Search path length:' + str(len(self.closedList)))
+                myFile.write('\n')
+                myFile.write('\n')
+                myFile.write('Solution path length:' + str(len(searchPath)-1) + 'moves')
+                myFile.write('\n')
+                myFile.write('\n')
+                solutionString = ''
+                searchPath = searchPath[1:]
+                for state in searchPath:
+                    solutionString += ' ' + state.carMovedWithDirection + '; '
+                myFile.write('Solution path:' + solutionString)
+                myFile.write('\n')
+                myFile.write('\n')
+
+                for state in searchPath:
+                    myFile.write(state.carMovedWithDirection + '       ' + str(
+                        state.fuelOfCars[state.moved]) + ' ' + state.stringRep + ' ' + getFormattedFuel(
+                        state.fuelOfCars))
+                    myFile.write('\n')
+                myFile.write('\n')
+                myFile.write('\n')
+                myFile.write(prettyPrint(searchPath[len(searchPath) - 1].gameboard))
+
+    def writeSearchFile(self, searchAlgo, number):
+        for k, value in self.closedList.items():
+            writeToSearch(value.combinedCost, value.costOfMove, value.heuristicCost, value.stringRep,
+                          getFormattedFuel(value.fuelOfCars), searchAlgo, number)
 
     def play(self):
+        a = datetime.datetime.now()
         while not self.openList.empty():
             currentState = self.openList.get()
             if currentState.solution():
-                return currentState
+                b = datetime.datetime.now()
+                self.timing = (b - a).seconds
+                self.winner = currentState
+                return
             marked = {}
             reOrder = False
             getRidOf = {}
@@ -68,6 +147,7 @@ class gamePlayer:
                         if (axis == 'right' or axis == 'down') and steps != 0:
                             start = 1
                             temp = deepcopy(currentState.gameboard)
+                            heuristicCost = self.heuristic(temp)
                             while start <= currentState.fuelOfCars[currentState.gameboard[i][j]] and start <= steps:
                                 message = ''
                                 if axis == 'right':
@@ -84,12 +164,13 @@ class gamePlayer:
                                     message = currentState.gameboard[i][j] + ' ' + 'down' + ' ' + str(start)
                                 fuelCopy = currentState.fuelOfCars.copy()
                                 fuelCopy[currentState.gameboard[i][j]] -= start
-                                newState = stateSpace(temp, fuelCopy, 1 + currentState.costOfMove, message,
-                                                      currentState)
+                                newState = stateSpace(temp, fuelCopy, 1 + currentState.costOfMove, heuristicCost,
+                                                      message,
+                                                      currentState, currentState.gameboard[i][j])
                                 start += 1
                                 if newState.stringRep not in self.closedList:
                                     if newState.stringRep in self.openListTracker and self.openListTracker[
-                                        newState.stringRep] > newState.costOfMove:
+                                        newState.stringRep] > newState.combinedCost:
                                         newStates.append(newState)
                                         reOrder = True
                                         getRidOf[newState.stringRep] = True
@@ -102,6 +183,7 @@ class gamePlayer:
                         if (axis == 'left' or axis == 'up') and steps != 0:
                             start = 1
                             temp = deepcopy(currentState.gameboard)
+                            heuristicCost = self.heuristic(temp)
                             while start <= currentState.fuelOfCars[currentState.gameboard[i][j]] and start <= steps:
                                 message = ''
                                 if axis == 'left':
@@ -118,12 +200,13 @@ class gamePlayer:
                                     message = currentState.gameboard[i][j] + ' ' + 'up' + ' ' + str(start)
                                 fuelCopy = currentState.fuelOfCars.copy()
                                 fuelCopy[currentState.gameboard[i][j]] -= start
-                                newState = stateSpace(temp, fuelCopy, 1 + currentState.costOfMove, message,
-                                                      currentState)
+                                newState = stateSpace(temp, fuelCopy, 1 + currentState.costOfMove, heuristicCost,
+                                                      message,
+                                                      currentState, currentState.gameboard[i][j])
                                 start += 1
                                 if newState.stringRep not in self.closedList:
                                     if newState.stringRep in self.openListTracker and self.openListTracker[
-                                        newState.stringRep] > newState.costOfMove:
+                                        newState.stringRep] > newState.combinedCost:
                                         newStates.append(newState)
                                         prettyPrint(newState.gameboard)
                                         reOrder = True
@@ -143,8 +226,9 @@ class gamePlayer:
                 self.openList.put(state)
             for state in newStates:
                 self.openList.put(state)
-                self.openListTracker[state.stringRep] = state.costOfMove
-        return None
+                self.openListTracker[state.stringRep] = state.combinedCost
+        b = datetime.datetime.now()
+        self.timing = (b - a).seconds
 
 
 def getFuel(gamestring):
@@ -284,19 +368,15 @@ def moveUp(container, head, tail):
     return state
 
 
-def writeToSearch(totalCost, searchCost, heurisitcCost, board, fuels):
-    res = str(totalCost) + ' ' + ' ' + str(searchCost) + ' ' + str(heurisitcCost) + ' ' + board + fuels + '\n'
-    with open("search-path.txt", "a") as myfile:
-        myfile.write(res)
-
-
 def prettyPrint(container):
+    game = ""
     for row in container:
-        print(row)
-        print()
+        game += "".join(row)
+        game += '\n'
+    return game
 
 
-def printFuel(fuels):
+def getFormattedFuel(fuels):
     strRep = ''
     for car in fuels:
         if not (fuels[car] == 100):
@@ -306,23 +386,8 @@ def printFuel(fuels):
 
 if __name__ == '__main__':
     game = "JBBCCCJDD..MJAAL.MFFKL.N..KGGN.HH..."
-    # "JBBCCCJDD..MJAAL.MFFKL.N..KGGN.HH..."
-    # game="IIB...C.BHHHC.AAD.....D.EEGGGF.....F"
-    # game ="C.B...C.BHHHAADD........EEGGGF.....F"
-    # game  ="...GF...BGF.AABCF....CDD...C....EE.."
-    newGame = gamePlayer(game, initalFuel=getFuel(game))
-    win = newGame.play()
-    for k,value in newGame.closedList.items():
-        writeToSearch(value.costOfMove, value.costOfMove, 0, value.stringRep,
-                  printFuel(value.fuelOfCars))
-    # fuel = 0
-    # count = 0
-    # while not win == None:
-    #     # prettyPrint(win.gameboard)
-    #     print('-------------')
-    #     print(win.carMovedWithDirection)
-    #     win = win.parent
-    #     count += 1
-    # count -= 1
-    # print(count)
-    # print(fuel)
+
+    newGame = gamePlayer(PriorityQueue(), game, getFuel(game), noHeuristic)
+    newGame.play()
+    newGame.writeSearchFile('ucs', 3)
+    newGame.writeToSolution('ucs', 3)
