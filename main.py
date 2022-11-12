@@ -260,7 +260,7 @@ def getFuel(gamestring):
     return fuels
 
 
-# def move(container,index,count,direction):
+
 
 def locateFrontAndBack(container, yIndex, xIndex):
     car = container[yIndex][xIndex]
