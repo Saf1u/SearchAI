@@ -7,6 +7,10 @@ def noHeuristic(x):
     return 0
 
 
+def pathFromPatent(node):
+    return 1 + node.costOfMove
+
+
 class stateSpace:
     def __init__(self, gameboard, fuelOfCars, costOfMove, heuristicCost, carMovedWithDirection, parent, carMoved):
         self.gameboard = gameboard
@@ -44,7 +48,7 @@ def writeToSearch(totalCost, searchCost, heurisitcCost, board, fuels, name, numb
 
 
 class gamePlayer:
-    def __init__(self, dataStructure, gameString, initalFuel, heuristic):
+    def __init__(self, dataStructure, gameString, initalFuel, heuristic, pathCostFunction):
         gameState = [["." for x in range(6)] for y in range(6)]
         for i in range(0, 6):
             for j in range(0, 6):
@@ -55,6 +59,7 @@ class gamePlayer:
         self.heuristic = heuristic
         self.openListTracker = {init.stringRep: init.costOfMove}
         self.closedList = {}
+        self.pathCostFunction = pathCostFunction
         self.timing = 0
         strRep = 'Car fuel available: '
         for car in initalFuel:
@@ -78,6 +83,7 @@ class gamePlayer:
             searchPath.reverse()
             with open(name + "-SOL-" + str(number) + ".txt", "a+") as myFile:
                 myFile.write("--------------------------------------------------------------------------------")
+                myFile.write('\n')
                 myFile.write("Initial board configuration: " + searchPath[0].stringRep)
                 myFile.write('\n')
                 myFile.write('\n')
@@ -85,13 +91,13 @@ class gamePlayer:
                 myFile.write('Car fuel available: ' + self.startingFuel)
                 myFile.write('\n')
                 myFile.write('\n')
-                myFile.write('Runtime:' + str(self.timing)+'seconds')
+                myFile.write('Runtime:' + str(self.timing) + 'seconds')
                 myFile.write('\n')
                 myFile.write('\n')
                 myFile.write('Search path length:' + str(len(self.closedList)))
                 myFile.write('\n')
                 myFile.write('\n')
-                myFile.write('Solution path length:' + str(len(searchPath)-1) + 'moves')
+                myFile.write('Solution path length:' + str(len(searchPath) - 1) + 'moves')
                 myFile.write('\n')
                 myFile.write('\n')
                 solutionString = ''
@@ -122,7 +128,7 @@ class gamePlayer:
             currentState = self.openList.get()
             if currentState.solution():
                 b = datetime.datetime.now()
-                self.timing = (b - a).seconds
+                self.timing = (b - a).microseconds / 1000000
                 self.winner = currentState
                 return
             marked = {}
@@ -145,6 +151,7 @@ class gamePlayer:
                             start = 1
                             temp = deepcopy(currentState.gameboard)
                             heuristicCost = self.heuristic(temp)
+                            costFromRoot = self.pathCostFunction(currentState)
                             while start <= currentState.fuelOfCars[currentState.gameboard[i][j]] and start <= steps:
                                 message = ''
                                 if axis == 'right':
@@ -161,7 +168,7 @@ class gamePlayer:
                                     message = currentState.gameboard[i][j] + ' ' + 'down ' + ' ' + str(start)
                                 fuelCopy = currentState.fuelOfCars.copy()
                                 fuelCopy[currentState.gameboard[i][j]] -= start
-                                newState = stateSpace(temp, fuelCopy, 1 + currentState.costOfMove, heuristicCost,
+                                newState = stateSpace(temp, fuelCopy, costFromRoot, heuristicCost,
                                                       message,
                                                       currentState, currentState.gameboard[i][j])
                                 start += 1
@@ -181,6 +188,7 @@ class gamePlayer:
                             start = 1
                             temp = deepcopy(currentState.gameboard)
                             heuristicCost = self.heuristic(temp)
+                            costFromRoot = self.pathCostFunction(currentState)
                             while start <= currentState.fuelOfCars[currentState.gameboard[i][j]] and start <= steps:
                                 message = ''
                                 if axis == 'left':
@@ -197,7 +205,7 @@ class gamePlayer:
                                     message = currentState.gameboard[i][j] + ' ' + 'up   ' + ' ' + str(start)
                                 fuelCopy = currentState.fuelOfCars.copy()
                                 fuelCopy[currentState.gameboard[i][j]] -= start
-                                newState = stateSpace(temp, fuelCopy, 1 + currentState.costOfMove, heuristicCost,
+                                newState = stateSpace(temp, fuelCopy, costFromRoot, heuristicCost,
                                                       message,
                                                       currentState, currentState.gameboard[i][j])
                                 start += 1
@@ -382,9 +390,9 @@ def getFormattedFuel(fuels):
 
 
 if __name__ == '__main__':
-    game = "BBIJ....IJCC..IAAMGDDK.MGH.KL.GHFFL."
+    game = ".BBCCC..EEKLAAIJKLH.IJFFHGGG.M.....M K6 M0"
 
-    newGame = gamePlayer(PriorityQueue(), game, getFuel(game), noHeuristic)
+    newGame = gamePlayer(PriorityQueue(), game, getFuel(game), noHeuristic,pathFromPatent)
     newGame.play()
     newGame.writeSearchFile('ucs', 3)
     newGame.writeToSolution('ucs', 3)
