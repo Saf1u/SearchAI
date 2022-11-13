@@ -7,6 +7,16 @@ def noHeuristic(x):
     return 0
 
 
+# def numberOfBlockingVehiclesHeuristic(state):
+#     been = {}
+#     count = 0
+#     x = 0
+#     for i in range(0, 6):
+#         if state[2][i] == 'A':
+#          for j in range(i,6):
+#              if state[2][j] != 'A':
+
+
 def pathFromPatent(node):
     return 1 + node.costOfMove
 
@@ -48,7 +58,7 @@ def writeToSearch(totalCost, searchCost, heurisitcCost, board, fuels, name, numb
 
 
 class gamePlayer:
-    def __init__(self, dataStructure, gameString, initalFuel, heuristic, pathCostFunction):
+    def __init__(self, dataStructure, gameString, initalFuel, heuristic, pathCostFunction, ucs, gbfs, algoA):
         gameState = [["." for x in range(6)] for y in range(6)]
         for i in range(0, 6):
             for j in range(0, 6):
@@ -61,12 +71,33 @@ class gamePlayer:
         self.closedList = {}
         self.pathCostFunction = pathCostFunction
         self.timing = 0
+        self.isAlgoA = algoA
+        self.isGBFS = gbfs
+        self.isUCS = ucs
+        self.getRidOf = {}
+        self.newStates = []
+        self.reOrder = False
         strRep = 'Car fuel available: '
         for car in initalFuel:
             strRep += car + ':' + str(initalFuel[car]) + ", "
 
         self.startingFuel = strRep
         self.winner = None
+
+    def buildStatesUCS(self, currentState, i, j, start, temp, costFromRoot, heuristicCost, message):
+        fuelCopy = currentState.fuelOfCars.copy()
+        fuelCopy[currentState.gameboard[i][j]] -= start
+        newState = stateSpace(temp, fuelCopy, costFromRoot, heuristicCost,
+                              message,
+                              currentState, currentState.gameboard[i][j])
+        if newState.stringRep not in self.closedList:
+            if newState.stringRep in self.openListTracker and self.openListTracker[
+                newState.stringRep] > newState.combinedCost:
+                self.newStates.append(newState)
+                self.reOrder = True
+                self.getRidOf[newState.stringRep] = True
+            elif newState.stringRep not in self.openListTracker:
+                self.newStates.append(newState)
 
     def writeToSolution(self, name, number):
         if self.winner is None:
@@ -132,12 +163,12 @@ class gamePlayer:
                 self.winner = currentState
                 return
             marked = {}
-            reOrder = False
-            getRidOf = {}
+            self.reOrder = False
+            self.getRidOf = {}
             self.closedList[currentState.stringRep] = currentState
             if currentState.stringRep in self.openListTracker:
                 del self.openListTracker[currentState.stringRep]
-            newStates = []
+            self.newStates = []
             for i in range(0, 6):
                 for j in range(0, 6):
                     if currentState.gameboard[i][j] not in marked:
@@ -146,9 +177,9 @@ class gamePlayer:
                         coordinates = locateFrontAndBack(currentState.gameboard, i, j)
                         axis = coordinates[3][1]
                         steps = coordinates[3][0]
+                        start = 1
 
                         if (axis == 'right' or axis == 'down') and steps != 0:
-                            start = 1
                             temp = deepcopy(currentState.gameboard)
                             heuristicCost = self.heuristic(temp)
                             costFromRoot = self.pathCostFunction(currentState)
@@ -166,26 +197,15 @@ class gamePlayer:
                                     coordinates = locateFrontAndBack(temp, i + (start - 1), j)
                                     temp = moveDown(temp, coordinates[0], coordinates[1])
                                     message = currentState.gameboard[i][j] + ' ' + 'down ' + ' ' + str(start)
-                                fuelCopy = currentState.fuelOfCars.copy()
-                                fuelCopy[currentState.gameboard[i][j]] -= start
-                                newState = stateSpace(temp, fuelCopy, costFromRoot, heuristicCost,
-                                                      message,
-                                                      currentState, currentState.gameboard[i][j])
+                                if self.isUCS:
+                                    self.buildStatesUCS(currentState, i, j, start, temp, costFromRoot, heuristicCost,
+                                                        message)
                                 start += 1
-                                if newState.stringRep not in self.closedList:
-                                    if newState.stringRep in self.openListTracker and self.openListTracker[
-                                        newState.stringRep] > newState.combinedCost:
-                                        newStates.append(newState)
-                                        reOrder = True
-                                        getRidOf[newState.stringRep] = True
-                                    elif newState.stringRep not in self.openListTracker:
-                                        newStates.append(newState)
                         coordinates = locateFrontAndBack(currentState.gameboard, i, j)
                         axis = coordinates[2][1]
                         steps = coordinates[2][0]
-
+                        start = 1
                         if (axis == 'left' or axis == 'up') and steps != 0:
-                            start = 1
                             temp = deepcopy(currentState.gameboard)
                             heuristicCost = self.heuristic(temp)
                             costFromRoot = self.pathCostFunction(currentState)
@@ -203,33 +223,22 @@ class gamePlayer:
                                     coordinates = locateFrontAndBack(temp, i - (start - 1), j)
                                     temp = moveUp(temp, coordinates[0], coordinates[1])
                                     message = currentState.gameboard[i][j] + ' ' + 'up   ' + ' ' + str(start)
-                                fuelCopy = currentState.fuelOfCars.copy()
-                                fuelCopy[currentState.gameboard[i][j]] -= start
-                                newState = stateSpace(temp, fuelCopy, costFromRoot, heuristicCost,
-                                                      message,
-                                                      currentState, currentState.gameboard[i][j])
+                                if self.isUCS:
+                                    self.buildStatesUCS(currentState, i, j, start, temp, costFromRoot, heuristicCost,
+                                                        message)
                                 start += 1
-                                if newState.stringRep not in self.closedList:
-                                    if newState.stringRep in self.openListTracker and self.openListTracker[
-                                        newState.stringRep] > newState.combinedCost:
-                                        newStates.append(newState)
-                                        prettyPrint(newState.gameboard)
-                                        reOrder = True
-                                        getRidOf[newState.stringRep] = True
-                                    elif newState.stringRep not in self.openListTracker:
-                                        newStates.append(newState)
 
             oldStates = []
-            if reOrder:
+            if self.reOrder:
                 while not self.openList.empty():
                     oldState = self.openList.get()
-                    if oldState.stringRep in getRidOf:
+                    if oldState.stringRep in self.getRidOf:
                         del self.openListTracker[oldState.stringRep]
                     else:
                         oldStates.append(oldState)
             for state in oldStates:
                 self.openList.put(state)
-            for state in newStates:
+            for state in self.newStates:
                 self.openList.put(state)
                 self.openListTracker[state.stringRep] = state.combinedCost
         b = datetime.datetime.now()
@@ -258,8 +267,6 @@ def getFuel(gamestring):
         else:
             pos += 1
     return fuels
-
-
 
 
 def locateFrontAndBack(container, yIndex, xIndex):
@@ -391,8 +398,8 @@ def getFormattedFuel(fuels):
 
 if __name__ == '__main__':
     game = ".BBCCC..EEKLAAIJKLH.IJFFHGGG.M.....M K6 M0"
-
-    newGame = gamePlayer(PriorityQueue(), game, getFuel(game), noHeuristic,pathFromPatent)
+    newGame = gamePlayer(PriorityQueue(), game, getFuel(game), noHeuristic, pathFromPatent, ucs=True, gbfs=False,
+                         algoA=False)
     newGame.play()
     newGame.writeSearchFile('ucs', 3)
     newGame.writeToSolution('ucs', 3)
