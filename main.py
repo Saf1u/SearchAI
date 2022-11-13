@@ -138,6 +138,17 @@ class gamePlayer:
                 return
         self.newStates.append(newState)
 
+    def checkAlgoAndBuildStates(self, currentState, i, j, start, temp, costFromRoot, heuristicCost, message):
+        if self.isUCS:
+            self.buildStatesUCS(currentState, i, j, start, temp, costFromRoot, heuristicCost,
+                                message)
+        elif self.isGBFS:
+            self.buildStatesGBFS(currentState, i, j, start, temp, costFromRoot, heuristicCost,
+                                 message)
+        elif self.isAlgoA:
+            self.buildStatesAlgoA(currentState, i, j, start, temp, costFromRoot, heuristicCost,
+                                  message)
+
     def writeToSolution(self, name, number):
         if self.winner is None:
             with open(name + "-search-" + str(number) + ".txt", "a+") as myFile:
@@ -236,9 +247,7 @@ class gamePlayer:
                                     coordinates = locateFrontAndBack(temp, i + (start - 1), j)
                                     temp = moveDown(temp, coordinates[0], coordinates[1])
                                     message = currentState.gameboard[i][j] + ' ' + 'down ' + ' ' + str(start)
-                                if self.isUCS:
-                                    self.buildStatesUCS(currentState, i, j, start, temp, costFromRoot, heuristicCost,
-                                                        message)
+                                self.checkAlgoAndBuildStates(currentState, i, j, start, temp, costFromRoot, heuristicCost,message)
                                 start += 1
                         coordinates = locateFrontAndBack(currentState.gameboard, i, j)
                         axis = coordinates[2][1]
@@ -262,9 +271,9 @@ class gamePlayer:
                                     coordinates = locateFrontAndBack(temp, i - (start - 1), j)
                                     temp = moveUp(temp, coordinates[0], coordinates[1])
                                     message = currentState.gameboard[i][j] + ' ' + 'up   ' + ' ' + str(start)
-                                if self.isUCS:
-                                    self.buildStatesUCS(currentState, i, j, start, temp, costFromRoot, heuristicCost,
-                                                        message)
+                                self.checkAlgoAndBuildStates(currentState, i, j, start, temp, costFromRoot, heuristicCost,
+                                                       message)
+
                                 start += 1
 
             oldStates = []
