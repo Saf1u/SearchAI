@@ -13,14 +13,20 @@ def noCostFromParent(x):
     return 0
 
 
-# def numberOfBlockingVehiclesHeuristic(state):
-#     been = {}
-#     count = 0
-#     x = 0
-#     for i in range(0, 6):
-#         if state[2][i] == 'A':
-#          for j in range(i,6):
-#              if state[2][j] != 'A':
+def numberOfBlockingVehiclesHeuristic(state):
+    been = {}
+    count = 0
+    x = 0
+    for i in range(0, 6):
+        if state[2][i] == 'A':
+            x = i + 2
+            break
+    for i in range(x, 6):
+        if state[2][i] != '.':
+            if state[2][i] not in been:
+                count += 1
+                been[state[2][i]] = True
+    return count
 
 
 # for ucs g(n)
@@ -122,7 +128,7 @@ class gamePlayer:
                               message,
                               currentState, currentState.gameboard[i][j])
         if newState.stringRep in self.closedList:
-            if self.closedList[newState.stringRep] <= newState.combinedCost:
+            if self.closedList[newState.stringRep].combinedCost <= newState.combinedCost:
                 return
             else:
                 del self.closedList[newState.stringRep]
@@ -247,7 +253,8 @@ class gamePlayer:
                                     coordinates = locateFrontAndBack(temp, i + (start - 1), j)
                                     temp = moveDown(temp, coordinates[0], coordinates[1])
                                     message = currentState.gameboard[i][j] + ' ' + 'down ' + ' ' + str(start)
-                                self.checkAlgoAndBuildStates(currentState, i, j, start, temp, costFromRoot, heuristicCost,message)
+                                self.checkAlgoAndBuildStates(currentState, i, j, start, temp, costFromRoot,
+                                                             heuristicCost, message)
                                 start += 1
                         coordinates = locateFrontAndBack(currentState.gameboard, i, j)
                         axis = coordinates[2][1]
@@ -271,8 +278,9 @@ class gamePlayer:
                                     coordinates = locateFrontAndBack(temp, i - (start - 1), j)
                                     temp = moveUp(temp, coordinates[0], coordinates[1])
                                     message = currentState.gameboard[i][j] + ' ' + 'up   ' + ' ' + str(start)
-                                self.checkAlgoAndBuildStates(currentState, i, j, start, temp, costFromRoot, heuristicCost,
-                                                       message)
+                                self.checkAlgoAndBuildStates(currentState, i, j, start, temp, costFromRoot,
+                                                             heuristicCost,
+                                                             message)
 
                                 start += 1
 
@@ -446,8 +454,8 @@ def getFormattedFuel(fuels):
 
 if __name__ == '__main__':
     game = ".BBCCC..EEKLAAIJKLH.IJFFHGGG.M.....M K6 M0"
-    newGame = gamePlayer(PriorityQueue(), game, getFuel(game), noHeuristic, pathFromPatent, ucs=True, gbfs=False,
-                         algoA=False)
+    newGame = gamePlayer(PriorityQueue(), game, getFuel(game), numberOfBlockingVehiclesHeuristic, pathFromPatent, ucs=False, gbfs=False,
+                         algoA=True)
     newGame.play()
-    newGame.writeSearchFile('ucs', 3)
-    newGame.writeToSolution('ucs', 3)
+    newGame.writeSearchFile('algoA', 3)
+    newGame.writeToSolution('algoA', 3)
