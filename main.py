@@ -3,7 +3,13 @@ from copy import deepcopy
 from queue import PriorityQueue
 
 
+# for ucs h(n)
 def noHeuristic(x):
+    return 0
+
+
+# for gbfs g(n)
+def noCostFromParent(x):
     return 0
 
 
@@ -17,6 +23,7 @@ def noHeuristic(x):
 #              if state[2][j] != 'A':
 
 
+# for ucs g(n)
 def pathFromPatent(node):
     return 1 + node.costOfMove
 
@@ -98,6 +105,38 @@ class gamePlayer:
                 self.getRidOf[newState.stringRep] = True
             elif newState.stringRep not in self.openListTracker:
                 self.newStates.append(newState)
+
+    def buildStatesGBFS(self, currentState, i, j, start, temp, costFromRoot, heuristicCost, message):
+        fuelCopy = currentState.fuelOfCars.copy()
+        fuelCopy[currentState.gameboard[i][j]] -= start
+        newState = stateSpace(temp, fuelCopy, costFromRoot, heuristicCost,
+                              message,
+                              currentState, currentState.gameboard[i][j])
+        if newState.stringRep not in self.closedList and newState.stringRep not in self.openListTracker:
+            self.newStates.append(newState)
+
+    def buildStatesAlgoA(self, currentState, i, j, start, temp, costFromRoot, heuristicCost, message):
+        fuelCopy = currentState.fuelOfCars.copy()
+        fuelCopy[currentState.gameboard[i][j]] -= start
+        newState = stateSpace(temp, fuelCopy, costFromRoot, heuristicCost,
+                              message,
+                              currentState, currentState.gameboard[i][j])
+        if newState.stringRep in self.closedList:
+            if self.closedList[newState.stringRep] <= newState.combinedCost:
+                return
+            else:
+                del self.closedList[newState.stringRep]
+                self.newStates.append(newState)
+                return
+        if newState.stringRep in self.openListTracker:
+            if self.openListTracker[newState.stringRep] <= newState.combinedCost:
+                return
+            else:
+                self.newStates.append(newState)
+                self.reOrder = True
+                self.getRidOf[newState.stringRep] = True
+                return
+        self.newStates.append(newState)
 
     def writeToSolution(self, name, number):
         if self.winner is None:
