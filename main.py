@@ -489,9 +489,9 @@ def getFormattedFuel(fuels):
 
 if __name__ == '__main__':
     game = "BB.G.HE..G.HEAAG.I..FCCIDDF..I..F..."
-    newGame = gamePlayer(PriorityQueue(), game, getFuel(game), noHeuristic, pathFromPatent,
-                         ucs=True, gbfs=False,
-                         algoA=False)
+    newGame = gamePlayer(PriorityQueue(), game, getFuel(game), numberOfBlockingVehiclesHeuristicScaled, pathFromPatent,
+                         ucs=False, gbfs=False,
+                         algoA=True)
     newGame.play()
-    newGame.writeSearchFile('ucs', 3)
-    newGame.writeToSolution('ucs', 3)
+    newGame.writeSearchFile('algoA', 3)
+    newGame.writeToSolution('algoA', 3)
