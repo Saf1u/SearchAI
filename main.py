@@ -29,6 +29,25 @@ def numberOfBlockingVehiclesHeuristic(state):
     return count
 
 
+def numberOfBlockingVehiclesHeuristicScaled(state):
+    # change this to probably mess with admissibility(higher constant less optimism)
+    return 2 * numberOfBlockingVehiclesHeuristic(state)
+
+
+def numberOfBlockingPositions(state):
+    count = 0
+    x = 0
+    for i in range(0, 6):
+        if state[2][i] == 'A':
+            x = i + 2
+            break
+    for i in range(x, 6):
+        if state[2][i] != '.':
+            if state[2][i]:
+                count += 1
+    return count
+
+
 # for ucs g(n)
 def pathFromPatent(node):
     return 1 + node.costOfMove
@@ -82,6 +101,7 @@ class gamePlayer:
         self.heuristic = heuristic
         self.openListTracker = {init.stringRep: init.costOfMove}
         self.closedList = {}
+        self.initialConfig = init
         self.pathCostFunction = pathCostFunction
         self.timing = 0
         self.isAlgoA = algoA
@@ -157,8 +177,23 @@ class gamePlayer:
 
     def writeToSolution(self, name, number):
         if self.winner is None:
-            with open(name + "-search-" + str(number) + ".txt", "a+") as myFile:
+            with open(name + "-SOL-" + str(number) + ".txt", "a+") as myFile:
                 myFile.write("no solution")
+                myFile.write("--------------------------------------------------------------------------------")
+                myFile.write('\n')
+                myFile.write("Initial board configuration: " + self.initialConfig.stringRep)
+                myFile.write('\n')
+                myFile.write('\n')
+                myFile.write(prettyPrint(self.initialConfig.gameboard))
+                myFile.write('Car fuel available: ' + self.startingFuel)
+                myFile.write('\n')
+                myFile.write('\n')
+                myFile.write('no solution found')
+                myFile.write('\n')
+                myFile.write('\n')
+                myFile.write('Runtime:' + str(self.timing) + 'seconds')
+                myFile.write('\n')
+                myFile.write('\n')
         else:
             searchPath = []
             win = self.winner
@@ -453,9 +488,10 @@ def getFormattedFuel(fuels):
 
 
 if __name__ == '__main__':
-    game = ".BBCCC..EEKLAAIJKLH.IJFFHGGG.M.....M K6 M0"
-    newGame = gamePlayer(PriorityQueue(), game, getFuel(game), numberOfBlockingVehiclesHeuristic, pathFromPatent, ucs=False, gbfs=False,
-                         algoA=True)
+    game = "BB.G.HE..G.HEAAG.I..FCCIDDF..I..F..."
+    newGame = gamePlayer(PriorityQueue(), game, getFuel(game), noHeuristic, pathFromPatent,
+                         ucs=True, gbfs=False,
+                         algoA=False)
     newGame.play()
-    newGame.writeSearchFile('algoA', 3)
-    newGame.writeToSolution('algoA', 3)
+    newGame.writeSearchFile('ucs', 3)
+    newGame.writeToSolution('ucs', 3)

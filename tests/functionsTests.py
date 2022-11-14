@@ -1,4 +1,4 @@
-from main import locateFrontAndBack, numberOfBlockingVehiclesHeuristic
+from main import locateFrontAndBack, numberOfBlockingVehiclesHeuristic, numberOfBlockingPositions
 
 board = [
     ['C', 'C', 'D', 'D', 'D', 'N'],
@@ -60,6 +60,58 @@ def test_my_h1():
     ]
     for case in testcases:
         actual = numberOfBlockingVehiclesHeuristic(case["input"])
+        assert (case["expected"]) == actual
+
+
+def test_my_h2():
+    testcases = [
+        {
+            "name": "A",
+            "input":  [
+    ['B', '.', 'D', 'D', 'D', 'N'],
+    ['B', '.', '.', 'X', 'X', 'N'],
+    ['.', 'A', 'A', 'P', 'P', 'N'],
+    ['G', '.', '.', 'L', 'L', '.'],
+    ['G', 'U', 'U', 'U', '.', 'R'],
+    ['.', 'D', 'D', 'D', '.', 'R'],],
+            "expected": 3
+        },
+        {
+            "name": "A",
+            "input": [
+                ['I', 'I', 'B', '.', '.', '.'],
+                ['C', '.', 'B', 'H', 'H', 'H'],
+                ['C', '.', 'A', 'A', 'D', '.'],
+                ['.', '.', '.', '.', 'D', '.'],
+                ['E', 'E', 'G', 'G', 'G', 'F'],
+                ['.', '.', '.', '.', '.', 'F'], ],
+            "expected": 1
+        },
+        {
+            "name": "A",
+            "input": [
+                ['C', '.', 'B', '.', '.', '.'],
+                ['C', '.', 'B', 'H', 'H', 'H'],
+                ['A', 'A', 'D', 'D', '.', '.'],
+                ['.', '.', '.', '.', '.', '.'],
+                ['E', 'E', 'G', 'G', 'G', 'F'],
+                ['.', '.', '.', '.', '.', 'F'], ],
+            "expected": 2
+        },
+        {
+            "name": "A",
+            "input": [
+                ['.', '.', '.', 'G', 'F', '.'],
+                ['.', '.', 'B', 'G', 'F', '.'],
+                ['A', 'A', 'B', 'C', 'F', '.'],
+                ['.', '.', '.', 'C', 'D', 'D'],
+                ['.', '.', '.', 'C', '.', '.'],
+                ['.', '.', 'E', 'E', '.', '.'], ],
+            "expected": 3
+        }
+    ]
+    for case in testcases:
+        actual = numberOfBlockingPositions(case["input"])
         assert (case["expected"]) == actual
 
 
