@@ -487,11 +487,43 @@ def getFormattedFuel(fuels):
     return strRep
 
 
+def readInput(filename):
+    puzzles = []
+    with open(filename) as myfile:
+        for line in myfile:
+            if line.strip():
+                # print(line)
+                if line[0] != '#':
+                    puzzles.append(line.strip())
+    return puzzles
+
+
 if __name__ == '__main__':
-    game = "BB.G.HE..G.HEAAG.I..FCCIDDF..I..F..."
-    newGame = gamePlayer(PriorityQueue(), game, getFuel(game), numberOfBlockingVehiclesHeuristicScaled, pathFromPatent,
-                         ucs=False, gbfs=False,
-                         algoA=True)
-    newGame.play()
-    newGame.writeSearchFile('algoA', 3)
-    newGame.writeToSolution('algoA', 3)
+    games = readInput('sample-input.txt')
+    heurestics = {"h1": numberOfBlockingVehiclesHeuristic, "h2": numberOfBlockingVehiclesHeuristicScaled,
+                  "h3": numberOfBlockingPositions}
+    i = 1
+    for game in games:
+        #ucs
+        newGame = gamePlayer(PriorityQueue(), game, getFuel(game), noHeuristic, pathFromPatent,
+                             ucs=True, gbfs=False,
+                             algoA=False)
+        newGame.play()
+        newGame.writeSearchFile('ucs', i)
+        newGame.writeToSolution('ucs', i)
+        for heurestic in heurestics:
+            # gbfs and algoA
+            newGame = gamePlayer(PriorityQueue(), game, getFuel(game), heurestics[heurestic], noCostFromParent,
+                                 ucs=False, gbfs=True,
+                                 algoA=False)
+            newGame.play()
+            newGame.writeSearchFile('gbfs-' + str(heurestic), i)
+            newGame.writeToSolution('gbfs-' + str(heurestic), i)
+
+            newGame = gamePlayer(PriorityQueue(), game, getFuel(game), heurestics[heurestic], pathFromPatent,
+                                 ucs=False, gbfs=False,
+                                 algoA=True)
+            newGame.play()
+            newGame.writeSearchFile('AlgoA-' + str(heurestic), i)
+            newGame.writeToSolution('AlgoA-' + str(heurestic), i)
+        i += 1
