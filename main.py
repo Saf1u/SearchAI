@@ -527,7 +527,7 @@ if __name__ == '__main__':
 
     i = 1
     for game in games:
-        ucs
+        #ucs
         newGame = gamePlayer(PriorityQueue(), game, getFuel(game), noHeuristic, pathFromPatent,
                              ucs=True, gbfs=False,
                              algoA=False)
