@@ -106,7 +106,7 @@ class stateSpace:
 
 def writeToSearch(totalCost, searchCost, heurisitcCost, board, fuels, name, number):
     res = str(totalCost) + ' ' + ' ' + str(searchCost) + ' ' + str(heurisitcCost) + ' ' + board + fuels + '\n'
-    with open(name + "-search-" + str(number) + ".txt", "a+") as myfile:
+    with open("output/"+name + "-search-" + str(number) + ".txt", "a+") as myfile:
         myfile.write(res)
 
 
@@ -198,7 +198,7 @@ class gamePlayer:
 
     def writeToSolution(self, name, number):
         if self.winner is None:
-            with open(name + "-SOL-" + str(number) + ".txt", "a+") as myFile:
+            with open("output/"+name + "-SOL-" + str(number) + ".txt", "a+") as myFile:
                 myFile.write("no solution")
                 myFile.write("--------------------------------------------------------------------------------")
                 myFile.write('\n')
@@ -224,7 +224,7 @@ class gamePlayer:
                 win = win.parent
 
             searchPath.reverse()
-            with open(name + "-SOL-" + str(number) + ".txt", "a+") as myFile:
+            with open("output/"+name + "-SOL-" + str(number) + ".txt", "a+") as myFile:
                 myFile.write("--------------------------------------------------------------------------------")
                 myFile.write('\n')
                 myFile.write("Initial board configuration: " + searchPath[0].stringRep)
