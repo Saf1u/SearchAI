@@ -4,25 +4,37 @@ from queue import PriorityQueue
 
 
 # for ucs h(n)
-def noHeuristic(x):
+def noHeuristic(x,**kwargs):
     return 0
 
 
 # for gbfs g(n)
 def noCostFromParent(x):
     return 0
-def numberOfPositionsToGoal(state):
-    count = 0
+
+
+def numberOfPositionsToGoal(state,**kwargs):
+    fuels = kwargs.get('fuel', None)
+    ambulanceFuel=fuels['A']
     x = 0
     for i in range(0, 6):
         if state[2][i] == 'A':
-            x = i + 2
+            x = i + 1
             break
-    for i in range(x, 6):
-        count += 1
+
+    count = 5 - x
+    if count==0:
+        return 0
+    if ambulanceFuel>=count:
+        return 1
+    else:
+        return float('-inf')
+
+
     return count
 
-def numberOfBlockingVehiclesHeuristic(state):
+
+def numberOfBlockingVehiclesHeuristic(state,**kwargs):
     been = {}
     count = 0
     x = 0
@@ -38,12 +50,12 @@ def numberOfBlockingVehiclesHeuristic(state):
     return count
 
 
-def numberOfBlockingVehiclesHeuristicScaled(state):
+def numberOfBlockingVehiclesHeuristicScaled(state,**kwargs):
     # change this to probably mess with admissibility(higher constant less optimism)
     return 2 * numberOfBlockingVehiclesHeuristic(state)
 
 
-def numberOfBlockingPositions(state):
+def numberOfBlockingPositions(state,**kwargs):
     count = 0
     x = 0
     for i in range(0, 6):
@@ -53,7 +65,7 @@ def numberOfBlockingPositions(state):
     for i in range(x, 6):
         if state[2][i] != '.':
             # if state[2][i]:
-                count += 1
+            count += 1
     return count
 
 
@@ -281,7 +293,7 @@ class gamePlayer:
 
                         if (axis == 'right' or axis == 'down') and steps != 0:
                             temp = deepcopy(currentState.gameboard)
-                            heuristicCost = self.heuristic(temp)
+                            heuristicCost = self.heuristic(temp,fuel=currentState.fuelOfCars)
                             costFromRoot = self.pathCostFunction(currentState)
                             while start <= currentState.fuelOfCars[currentState.gameboard[i][j]] and start <= steps:
                                 message = ''
@@ -306,7 +318,7 @@ class gamePlayer:
                         start = 1
                         if (axis == 'left' or axis == 'up') and steps != 0:
                             temp = deepcopy(currentState.gameboard)
-                            heuristicCost = self.heuristic(temp)
+                            heuristicCost = self.heuristic(temp,fuel=currentState.fuelOfCars)
                             costFromRoot = self.pathCostFunction(currentState)
                             while start <= currentState.fuelOfCars[currentState.gameboard[i][j]] and start <= steps:
                                 message = ''
@@ -512,9 +524,10 @@ if __name__ == '__main__':
     heurestics = {"h1": numberOfBlockingVehiclesHeuristic, "h2": numberOfBlockingVehiclesHeuristicScaled,
                   "h3": numberOfBlockingPositions,"h4": numberOfPositionsToGoal}
 
+
     i = 1
     for game in games:
-        #ucs
+        ucs
         newGame = gamePlayer(PriorityQueue(), game, getFuel(game), noHeuristic, pathFromPatent,
                              ucs=True, gbfs=False,
                              algoA=False)
