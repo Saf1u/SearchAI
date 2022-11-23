@@ -11,7 +11,16 @@ def noHeuristic(x):
 # for gbfs g(n)
 def noCostFromParent(x):
     return 0
-
+def numberOfPositionsToGoal(state):
+    count = 0
+    x = 0
+    for i in range(0, 6):
+        if state[2][i] == 'A':
+            x = i + 2
+            break
+    for i in range(x, 6):
+        count += 1
+    return count
 
 def numberOfBlockingVehiclesHeuristic(state):
     been = {}
@@ -43,7 +52,7 @@ def numberOfBlockingPositions(state):
             break
     for i in range(x, 6):
         if state[2][i] != '.':
-            if state[2][i]:
+            # if state[2][i]:
                 count += 1
     return count
 
@@ -501,7 +510,8 @@ def readInput(filename):
 if __name__ == '__main__':
     games = readInput('sample-input.txt')
     heurestics = {"h1": numberOfBlockingVehiclesHeuristic, "h2": numberOfBlockingVehiclesHeuristicScaled,
-                  "h3": numberOfBlockingPositions}
+                  "h3": numberOfBlockingPositions,"h4": numberOfPositionsToGoal}
+
     i = 1
     for game in games:
         #ucs
