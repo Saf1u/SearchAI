@@ -31,7 +31,6 @@ def numberOfPositionsToGoal(state, **kwargs):
     else:
         return float('-inf')
 
-    return count
 
 
 def numberOfBlockingVehiclesHeuristic(state, **kwargs):
@@ -264,7 +263,7 @@ class gamePlayer:
                         analysisFile.write(
                             "Puzzle Number,Algorithm,Heuristic,Length of the solution,Length of The search path,Execution Time (in seconds)")
                         analysisFile.write('\n')
-                with open("./output/" + "analysis" + ".txt", "a+") as analysisFile:
+                with open("./output/" + "analysis" + ".csv", "a+") as analysisFile:
                     algo = name
                     parts = name.split('-')
                     if len(parts) < 2:
