@@ -1,10 +1,11 @@
 import datetime
+import os
 from copy import deepcopy
 from queue import PriorityQueue
 
 
 # for ucs h(n)
-def noHeuristic(x,**kwargs):
+def noHeuristic(x, **kwargs):
     return 0
 
 
@@ -13,9 +14,9 @@ def noCostFromParent(x):
     return 0
 
 
-def numberOfPositionsToGoal(state,**kwargs):
+def numberOfPositionsToGoal(state, **kwargs):
     fuels = kwargs.get('fuel', None)
-    ambulanceFuel=fuels['A']
+    ambulanceFuel = fuels['A']
     x = 0
     for i in range(0, 6):
         if state[2][i] == 'A':
@@ -23,18 +24,17 @@ def numberOfPositionsToGoal(state,**kwargs):
             break
 
     count = 5 - x
-    if count==0:
+    if count == 0:
         return 0
-    if ambulanceFuel>=count:
+    if ambulanceFuel >= count:
         return 1
     else:
         return float('-inf')
 
-
     return count
 
 
-def numberOfBlockingVehiclesHeuristic(state,**kwargs):
+def numberOfBlockingVehiclesHeuristic(state, **kwargs):
     been = {}
     count = 0
     x = 0
@@ -50,12 +50,12 @@ def numberOfBlockingVehiclesHeuristic(state,**kwargs):
     return count
 
 
-def numberOfBlockingVehiclesHeuristicScaled(state,**kwargs):
+def numberOfBlockingVehiclesHeuristicScaled(state, **kwargs):
     # change this to probably mess with admissibility(higher constant less optimism)
     return 2 * numberOfBlockingVehiclesHeuristic(state)
 
 
-def numberOfBlockingPositions(state,**kwargs):
+def numberOfBlockingPositions(state, **kwargs):
     count = 0
     x = 0
     for i in range(0, 6):
@@ -106,7 +106,7 @@ class stateSpace:
 
 def writeToSearch(totalCost, searchCost, heurisitcCost, board, fuels, name, number):
     res = str(totalCost) + ' ' + ' ' + str(searchCost) + ' ' + str(heurisitcCost) + ' ' + board + fuels + '\n'
-    with open("output/"+name + "-search-" + str(number) + ".txt", "a+") as myfile:
+    with open("./output/" + name + "-search-" + str(number) + ".txt", "a+") as myfile:
         myfile.write(res)
 
 
@@ -198,7 +198,7 @@ class gamePlayer:
 
     def writeToSolution(self, name, number):
         if self.winner is None:
-            with open("output/"+name + "-SOL-" + str(number) + ".txt", "a+") as myFile:
+            with open("./output/" + name + "-SOL-" + str(number) + ".txt", "a+") as myFile:
                 myFile.write("no solution")
                 myFile.write("--------------------------------------------------------------------------------")
                 myFile.write('\n')
@@ -224,7 +224,7 @@ class gamePlayer:
                 win = win.parent
 
             searchPath.reverse()
-            with open("output/"+name + "-SOL-" + str(number) + ".txt", "a+") as myFile:
+            with open("./output/" + name + "-SOL-" + str(number) + ".txt", "a+") as myFile:
                 myFile.write("--------------------------------------------------------------------------------")
                 myFile.write('\n')
                 myFile.write("Initial board configuration: " + searchPath[0].stringRep)
@@ -259,6 +259,22 @@ class gamePlayer:
                 myFile.write('\n')
                 myFile.write('\n')
                 myFile.write(prettyPrint(searchPath[len(searchPath) - 1].gameboard))
+                if not os.path.exists('./output/analysis.csv'):
+                    with open("./output/" + "analysis" + ".csv", "a+") as analysisFile:
+                        analysisFile.write(
+                            "Puzzle Number,Algorithm,Heuristic,Length of the solution,Length of The search path,Execution Time (in seconds)")
+                        analysisFile.write('\n')
+                with open("./output/" + "analysis" + ".txt", "a+") as analysisFile:
+                    algo = name
+                    parts = name.split('-')
+                    if len(parts) < 2:
+                        analysisFile.write(str(i) + ",UCS" + ",N/A," + str(len(searchPath) - 1) + "," + str(
+                            len(self.closedList)) + ',' + str(self.timing))
+                    else:
+                        analysisFile.write(
+                            str(i) + "," + parts[0] + "," + parts[1] + "," + str(len(searchPath) - 1) + "," + str(
+                                len(self.closedList)) + ',' + str(self.timing))
+                    analysisFile.write('\n')
 
     def writeSearchFile(self, searchAlgo, number):
         for k, value in self.closedList.items():
@@ -293,7 +309,7 @@ class gamePlayer:
 
                         if (axis == 'right' or axis == 'down') and steps != 0:
                             temp = deepcopy(currentState.gameboard)
-                            heuristicCost = self.heuristic(temp,fuel=currentState.fuelOfCars)
+                            heuristicCost = self.heuristic(temp, fuel=currentState.fuelOfCars)
                             costFromRoot = self.pathCostFunction(currentState)
                             while start <= currentState.fuelOfCars[currentState.gameboard[i][j]] and start <= steps:
                                 message = ''
@@ -318,7 +334,7 @@ class gamePlayer:
                         start = 1
                         if (axis == 'left' or axis == 'up') and steps != 0:
                             temp = deepcopy(currentState.gameboard)
-                            heuristicCost = self.heuristic(temp,fuel=currentState.fuelOfCars)
+                            heuristicCost = self.heuristic(temp, fuel=currentState.fuelOfCars)
                             costFromRoot = self.pathCostFunction(currentState)
                             while start <= currentState.fuelOfCars[currentState.gameboard[i][j]] and start <= steps:
                                 message = ''
@@ -354,7 +370,7 @@ class gamePlayer:
                 self.openList.put(state)
                 self.openListTracker[state.stringRep] = state.combinedCost
         b = datetime.datetime.now()
-        self.timing = (b - a).seconds
+        self.timing = (b - a).microseconds / 1000000
 
 
 def getFuel(gamestring):
@@ -522,12 +538,11 @@ def readInput(filename):
 if __name__ == '__main__':
     games = readInput('sample-input.txt')
     heurestics = {"h1": numberOfBlockingVehiclesHeuristic, "h2": numberOfBlockingVehiclesHeuristicScaled,
-                  "h3": numberOfBlockingPositions,"h4": numberOfPositionsToGoal}
-
+                  "h3": numberOfBlockingPositions, "h4": numberOfPositionsToGoal}
 
     i = 1
     for game in games:
-        #ucs
+        # ucs
         newGame = gamePlayer(PriorityQueue(), game, getFuel(game), noHeuristic, pathFromPatent,
                              ucs=True, gbfs=False,
                              algoA=False)
