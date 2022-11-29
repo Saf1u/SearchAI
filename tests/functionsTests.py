@@ -1,4 +1,4 @@
-from main import locateFrontAndBack, numberOfBlockingVehiclesHeuristic, numberOfBlockingPositions
+from main import locateFrontAndBack, numberOfBlockingVehiclesHeuristic, numberOfBlockingPositions, minClearable
 
 board = [
     ['C', 'C', 'D', 'D', 'D', 'N'],
@@ -226,3 +226,67 @@ def test_my_locator():
         for case in testcases:
             actual = locateFrontAndBack(board, case["input"][0], case["input"][1])
             assert (case["expected"]) == actual
+
+
+
+def test_my_h4():
+    testcases = [
+        {
+            "name": "A",
+            "input":  [
+    ['B', '.', 'D', 'D', 'D', 'N'],
+    ['B', '.', '.', 'X', 'X', 'N'],
+    ['.', 'A', 'A', 'P', 'P', 'N'],
+    ['G', '.', '.', 'L', 'L', '.'],
+    ['G', 'U', 'U', 'U', '.', 'R'],
+    ['.', 'D', 'D', 'D', '.', 'R'],],
+            "expected": 2
+        },
+        {
+            "name": "b",
+            "input": [
+                ['I', 'I', 'B', 'Z', 'Z', '.'],
+                ['C', '.', 'B', 'H', 'H', '.'],
+                ['C', '.', 'A', 'A', 'D', '.'],
+                ['.', '.', '.', '.', 'D', '.'],
+                ['E', 'E', 'G', 'G', 'G', 'F'],
+                ['.', '.', '.', 'P', 'P', 'F'], ],
+            "expected": 3
+        },
+        {
+            "name": "c",
+            "input": [
+                ['C', '.', 'B', '.', '.', '.'],
+                ['C', '.', 'B', 'H', 'H', 'H'],
+                ['A', 'A', 'D', 'D', '.', '.'],
+                ['.', '.', '.', '.', '.', '.'],
+                ['E', 'E', 'G', 'G', 'G', 'F'],
+                ['.', '.', '.', '.', '.', 'F'], ],
+            "expected": 1
+        },
+        {
+            "name": "A",
+            "input": [
+                ['.', '.', '.', 'G', 'F', '.'],
+                ['.', '.', 'B', 'G', 'F', '.'],
+                ['A', 'A', 'B', 'C', 'F', '.'],
+                ['.', '.', '.', 'C', 'D', 'D'],
+                ['.', '.', '.', 'C', '.', '.'],
+                ['.', '.', 'E', 'E', '.', '.'], ],
+            "expected": 4
+        },
+        {
+            "name": "A",
+            "input": [
+                ['.', '.', 'B', 'G', 'F', '.'],
+                ['.', '.', 'B', 'G', 'F', '.'],
+                ['A', 'A', '.', '.', '.', '.'],
+                ['.', '.', '.', 'C', 'D', 'D'],
+                ['.', '.', '.', 'C', '.', '.'],
+                ['.', '.', 'E', 'E', '.', '.'], ],
+            "expected": 0
+        }
+    ]
+    for case in testcases:
+        actual = minClearable(case["input"])
+        assert (case["expected"]) == actual
