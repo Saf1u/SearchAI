@@ -9,7 +9,7 @@ GGHHEF
 ...IJJ
 Car fuel available: Car fuel available: D:100, B:100, C:100, A:100, E:100, F:100, G:100, H:100, I:100, J:100, 
 
-Runtime:0.525387seconds
+Runtime:0.641261seconds
 
 Search path length:877
 

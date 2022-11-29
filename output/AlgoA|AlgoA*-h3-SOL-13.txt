@@ -9,7 +9,7 @@ Initial board configuration: ..............AA....................
 ......
 Car fuel available: Car fuel available: A:100, 
 
-Runtime:0.000673seconds
+Runtime:0.000663seconds
 
 Search path length:3
 

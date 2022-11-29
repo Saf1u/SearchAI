@@ -9,9 +9,9 @@ KKDDD.
 EEE.JJ
 Car fuel available: Car fuel available: F:100, G:100, B:100, I:100, A:100, K:100, D:100, E:100, J:100, 
 
-Runtime:0.141951seconds
+Runtime:0.093914seconds
 
-Search path length:197
+Search path length:104
 
 Solution path length:3moves
 

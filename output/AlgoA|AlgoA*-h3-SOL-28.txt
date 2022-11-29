@@ -9,7 +9,7 @@ BBB...
 DDDF..
 Car fuel available: Car fuel available: J:100, N:100, C:100, M:100, A:100, B:100, E:100, F:100, D:100, 
 
-Runtime:0.078785seconds
+Runtime:0.08592seconds
 
 Search path length:70
 

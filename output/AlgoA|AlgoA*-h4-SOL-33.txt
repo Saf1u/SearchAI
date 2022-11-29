@@ -9,9 +9,9 @@ J.LL..
 J..EEE
 Car fuel available: Car fuel available: D:100, F:100, N:100, G:100, M:100, A:100, C:100, B:100, J:100, L:100, E:100, 
 
-Runtime:0.674269seconds
+Runtime:0.620199seconds
 
-Search path length:685
+Search path length:355
 
 Solution path length:3moves
 

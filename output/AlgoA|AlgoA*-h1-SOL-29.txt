@@ -9,7 +9,7 @@ F..CC.
 ...DDD
 Car fuel available: Car fuel available: N:100, M:100, G:100, E:100, A:100, J:100, F:100, C:100, D:100, 
 
-Runtime:0.045065seconds
+Runtime:0.044455seconds
 
 Search path length:50
 

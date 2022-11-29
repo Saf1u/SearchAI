@@ -9,7 +9,7 @@ DMMM.N
 .....N
 Car fuel available: Car fuel available: B:100, C:100, E:100, G:100, L:100, A:100, I:100, J:100, D:100, F:100, M:100, N:100, 
 
-Runtime:0.362498seconds
+Runtime:0.41419seconds
 
 Search path length:2469
 

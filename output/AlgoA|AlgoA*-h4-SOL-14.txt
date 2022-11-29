@@ -9,19 +9,19 @@ N..KGG
 N.HH..
 Car fuel available: Car fuel available: J:100, B:100, C:100, D:100, M:100, A:100, L:100, F:100, K:100, N:100, G:100, H:100, 
 
-Runtime:0.491956seconds
+Runtime:0.396755seconds
 
-Search path length:523
+Search path length:445
 
 Solution path length:6moves
 
-Solution path: A left  1;  K up    1;  G left  3;  K down  1;  L down  2;  A right 3; 
+Solution path: A left  1;  K up    1;  G left  3;  L down  2;  K down  1;  A right 3; 
 
 A left  1       99 JBBCCCJDD..MJAA.L.MFFKL.N..KGGN.HH..  A99
 K up    1       99 JBBCCCJDD..MJAAKL.MFFKL.N...GGN.HH..  A99 K99
 G left  3       97 JBBCCCJDD..MJAAKL.MFFKL.NGG...N.HH..  A99 K99 G97
-K down  1       98 JBBCCCJDD..MJAA.L.MFFKL.NGGK..N.HH..  A99 K98 G97
-L down  2       98 JBBCCCJDD..MJAA...MFFK..NGGKL.N.HHL.  A99 L98 K98 G97
+L down  2       98 JBBCCCJDD..MJAAK..MFFK..NGG.L.N.HHL.  A99 L98 K99 G97
+K down  1       98 JBBCCCJDD..MJAA...MFFK..NGGKL.N.HHL.  A99 L98 K98 G97
 A right 3       96 JBBCCCJDD..MJ...AAMFFK..NGGKL.N.HHL.  A96 L98 K98 G97
 
 

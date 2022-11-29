@@ -1,21 +1,48 @@
 --------------------------------------------------------------------------------
-Initial board configuration: .F.KKK.F........AADMM...D..NNN.GG.BB
+Initial board configuration: .F.KKK.F......AA..DMM...D..NNN.GG.BB
 
 .F.KKK
 .F....
-....AA
+..AA..
 DMM...
 D..NNN
 .GG.BB
 Car fuel available: Car fuel available: F:100, K:100, A:100, D:100, M:100, N:100, G:100, B:100, 
 
-Runtime:9e-06seconds
+Runtime:0.191431seconds
 
-Search path length:0
+Search path length:194
 
-Solution path length:0moves
+Solution path length:21moves
 
-Solution path:
+Solution path: F down  1;  N left  2;  B left  1;  G left  1;  B left  1;  M right 3;  B right 2;  G right 2;  N right 2;  M left  2;  G left  2;  M right 1;  D up    3;  B left  2;  N left  3;  B right 1;  G right 1;  B right 1;  N right 2;  G right 1;  A right 2; 
+
+F down  1       99 ...KKK.F.....FAA..DMM...D..NNN.GG.BB  F99
+N left  2       98 ...KKK.F.....FAA..DMM...DNNN...GG.BB  F99 N98
+B left  1       99 ...KKK.F.....FAA..DMM...DNNN...GGBB.  F99 N98 B99
+G left  1       99 ...KKK.F.....FAA..DMM...DNNN..GG.BB.  F99 N98 G99 B99
+B left  1       98 ...KKK.F.....FAA..DMM...DNNN..GGBB..  F99 N98 G99 B98
+M right 3       97 ...KKK.F.....FAA..D...MMDNNN..GGBB..  F99 M97 N98 G99 B98
+B right 2       96 ...KKK.F.....FAA..D...MMDNNN..GG..BB  F99 M97 N98 G99 B96
+G right 2       97 ...KKK.F.....FAA..D...MMDNNN....GGBB  F99 M97 N98 G97 B96
+N right 2       96 ...KKK.F.....FAA..D...MMD..NNN..GGBB  F99 M97 N96 G97 B96
+M left  2       95 ...KKK.F.....FAA..D.MM..D..NNN..GGBB  F99 M95 N96 G97 B96
+G left  2       95 ...KKK.F.....FAA..D.MM..D..NNNGG..BB  F99 M95 N96 G95 B96
+M right 1       94 ...KKK.F.....FAA..D..MM.D..NNNGG..BB  F99 M94 N96 G95 B96
+D up    3       97 D..KKKDF.....FAA.....MM....NNNGG..BB  F99 D97 M94 N96 G95 B96
+B left  2       94 D..KKKDF.....FAA.....MM....NNNGGBB..  F99 D97 M94 N96 G95 B94
+N left  3       93 D..KKKDF.....FAA.....MM.NNN...GGBB..  F99 D97 M94 N93 G95 B94
+B right 1       93 D..KKKDF.....FAA.....MM.NNN...GG.BB.  F99 D97 M94 N93 G95 B93
+G right 1       94 D..KKKDF.....FAA.....MM.NNN....GGBB.  F99 D97 M94 N93 G94 B93
+B right 1       92 D..KKKDF.....FAA.....MM.NNN....GG.BB  F99 D97 M94 N93 G94 B92
+N right 2       91 D..KKKDF.....FAA.....MM...NNN..GG.BB  F99 D97 M94 N91 G94 B92
+G right 1       93 D..KKKDF.....FAA.....MM...NNN...GGBB  F99 D97 M94 N91 G93 B92
+A right 2       98 D..KKKDF.....F..AA...MM...NNN...GGBB  F99 A98 D97 M94 N91 G93 B92
 
 
-
+D..KKK
+DF....
+.F..AA
+...MM.
+..NNN.
+..GGBB

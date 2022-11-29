@@ -9,7 +9,7 @@ B.FF..
 B..HH.
 Car fuel available: Car fuel available: G:100, M:100, N:100, A:100, C:100, B:100, D:100, F:100, H:100, 
 
-Runtime:0.479991seconds
+Runtime:0.523872seconds
 
 Search path length:433
 

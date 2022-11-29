@@ -11,5 +11,5 @@ Car fuel available: Car fuel available: F:100, D:100, J:100, C:100, G:100, A:100
 
 no solution found
 
-Runtime:0.252789seconds
+Runtime:0.555824seconds
 

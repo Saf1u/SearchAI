@@ -1,0 +1,14 @@
+0  0 0 .F.KKK.F......AA..DMM...D..NNN.GG.BB
+1  1 0 ...KKK.F.....FAA..DMM...D..NNN.GG.BB F99
+1  1 0 .F.KKK.F.......AA.DMM...D..NNN.GG.BB A99
+1  1 0 .F.KKK.F......AA...MM...D..NNNDGG.BB D99
+1  1 0 .F.KKK.F......AA..DMM...DNNN...GG.BB N98
+1  1 0 .F.KKK.F......AA..DMM...D..NNN.GGBB. B99
+1  1 0 .F.KKK.F......AA..DMM...D.NNN..GG.BB N99
+1  1 0 .F.KKK.F....AA....DMM...D..NNN.GG.BB A98
+1  1 0 .F.KKK.F......AA..D...MMD..NNN.GG.BB M97
+1  1 0 .F.KKK.F......AA..D..MM.D..NNN.GG.BB M98
+1  1 0 .FKKK..F......AA..DMM...D..NNN.GG.BB K99
+1  1 0 .F.KKK.F.....AA...DMM...D..NNN.GG.BB A99
+1  1 0 .F.KKK.F......AA..D.MM..D..NNN.GG.BB M99
+1  1 0 DF.KKKDF......AA...MM......NNN.GG.BB D97

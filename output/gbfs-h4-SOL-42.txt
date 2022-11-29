@@ -9,7 +9,7 @@ GBB...
 ....E.
 Car fuel available: Car fuel available: D:100, M:100, G:100, F:100, A:100, N:100, B:100, E:100, 
 
-Runtime:0.060468seconds
+Runtime:0.067233seconds
 
 Search path length:85
 

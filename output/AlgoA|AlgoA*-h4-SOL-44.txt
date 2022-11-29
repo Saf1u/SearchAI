@@ -9,20 +9,20 @@ NNNMMM
 ..HHH.
 Car fuel available: Car fuel available: G:100, C:100, D:100, A:100, B:100, F:100, N:100, M:100, H:100, 
 
-Runtime:0.877388seconds
+Runtime:0.728207seconds
 
-Search path length:812
+Search path length:819
 
 Solution path length:7moves
 
-Solution path: G left  3;  C down  1;  D left  4;  B up    2;  C up    2;  F up    2;  A right 4; 
+Solution path: C down  1;  D left  4;  G left  3;  F up    2;  C up    2;  B up    2;  A right 4; 
 
-G left  3       97 GG.......CDDAABCF...B.F.NNNMMM..HHH.  G97
-C down  1       99 GG........DDAABCF...BCF.NNNMMM..HHH.  G97 C99
-D left  4       96 GG....DD....AABCF...BCF.NNNMMM..HHH.  G97 C99 D96
-B up    2       98 GGB...DDB...AA.CF....CF.NNNMMM..HHH.  G97 C99 D96 B98
-C up    2       97 GGBC..DDBC..AA..F.....F.NNNMMM..HHH.  G97 C97 D96 B98
-F up    2       98 GGBCF.DDBCF.AA..........NNNMMM..HHH.  G97 C97 D96 B98 F98
+C down  1       99 ...GG.....DDAABCF...BCF.NNNMMM..HHH.  C99
+D left  4       96 ...GG.DD....AABCF...BCF.NNNMMM..HHH.  C99 D96
+G left  3       97 GG....DD....AABCF...BCF.NNNMMM..HHH.  G97 C99 D96
+F up    2       98 GG..F.DD..F.AABC....BC..NNNMMM..HHH.  G97 C99 D96 F98
+C up    2       97 GG.CF.DD.CF.AAB.....B...NNNMMM..HHH.  G97 C97 D96 F98
+B up    2       98 GGBCF.DDBCF.AA..........NNNMMM..HHH.  G97 C97 D96 B98 F98
 A right 4       96 GGBCF.DDBCF.....AA......NNNMMM..HHH.  G97 C97 D96 A96 B98 F98
 
 

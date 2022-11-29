@@ -9,7 +9,7 @@ GM.LK.
 FFGLH.
 Car fuel available: Car fuel available: I:100, B:100, J:100, C:100, K:100, A:100, M:100, G:100, D:100, H:100, L:100, F:100, 
 
-Runtime:0.059023seconds
+Runtime:0.164261seconds
 
 Search path length:79
 

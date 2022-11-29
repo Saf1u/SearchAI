@@ -9,19 +9,19 @@ GM.LK.
 FFGLH.
 Car fuel available: Car fuel available: I:100, B:100, J:100, C:100, K:100, A:100, M:100, G:100, D:100, H:100, L:100, F:100, 
 
-Runtime:0.233941seconds
+Runtime:0.269384seconds
 
-Search path length:332
+Search path length:342
 
 Solution path length:5moves
 
-Solution path: K left  2;  A left  2;  M left  1;  M right 1;  A right 3; 
+Solution path: K left  2;  A left  1;  M left  1;  M right 1;  A right 2; 
 
 K left  2       98 IIBJ....CCCCK..AAMGDDK.HGM.LK.FFGLH.  K98
-A left  2       98 IIBJ....CCCCKAA..MGDDK.HGM.LK.FFGLH.  K98 A98
-M left  1       99 IIBJ....CCCCKAA.M.GDDK.HGM.LK.FFGLH.  K98 A98 M99
-M right 1       98 IIBJ....CCCCKAA...GDDK.HGM.LK.FFGLH.  K98 A98 M98
-A right 3       95 IIBJ....CCCCK...AAGDDK.HGM.LK.FFGLH.  K98 A95 M98
+A left  1       99 IIBJ....CCCCK.AA.MGDDK.HGM.LK.FFGLH.  K98 A99
+M left  1       99 IIBJ....CCCCK.AAM.GDDK.HGM.LK.FFGLH.  K98 A99 M99
+M right 1       98 IIBJ....CCCCK.AA..GDDK.HGM.LK.FFGLH.  K98 A99 M98
+A right 2       97 IIBJ....CCCCK...AAGDDK.HGM.LK.FFGLH.  K98 A97 M98
 
 
 IIBJ..

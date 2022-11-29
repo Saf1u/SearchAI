@@ -9,7 +9,7 @@ AABGM.
 ..EE..
 Car fuel available: Car fuel available: M:100, B:100, A:100, G:100, E:100, 
 
-Runtime:0.403176seconds
+Runtime:0.496464seconds
 
 Search path length:244
 

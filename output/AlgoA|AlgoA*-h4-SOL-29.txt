@@ -9,9 +9,9 @@ F..CC.
 ...DDD
 Car fuel available: Car fuel available: N:100, M:100, G:100, E:100, A:100, J:100, F:100, C:100, D:100, 
 
-Runtime:0.044158seconds
+Runtime:0.043091seconds
 
-Search path length:50
+Search path length:46
 
 Solution path length:2moves
 

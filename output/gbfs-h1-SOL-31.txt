@@ -9,7 +9,7 @@ CAA...
 .B.JJ.
 Car fuel available: Car fuel available: C:100, F:100, N:100, A:100, B:100, M:100, H:100, D:100, J:100, 
 
-Runtime:0.018885seconds
+Runtime:0.038413seconds
 
 Search path length:21
 

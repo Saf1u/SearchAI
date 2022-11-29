@@ -32,41 +32,14 @@ def numberOfPositionsToGoal(state, **kwargs):
         return float('-inf')
 
 
-def minClearable(state, **kwargs):
+def yCanLeave(state, **kwargs):
     horizontalBlocks = numberOfBlockingVehiclesHeuristic(state)
     if horizontalBlocks == 0:
         return 0
-    x = 0
-    tailBlocks = 0
-    headBlocks = 0
-    for i in range(0, 6):
-        if state[2][i] == 'A':
-            x = i + 2
-            break
-    for i in range(x, 6):
-        if state[2][i] != '.' and (state[3][i] == state[2][i] or state[1][i] == state[2][i]):
-            coordinates = locateFrontAndBack(state, 2, i)
-            # 3-1 is down increasing
-            # 2-1 is up decreasing
-            axis = coordinates[3][1]
-            xaxis = coordinates[0][1]
-            head = coordinates[0][0] - 1
-            tail = coordinates[1][0] + 1
-            seen = {}
-            for z in range(tail, 6):
-                if state[z][xaxis] != '.':
-                    if state[z][xaxis] not in seen:
-                        tailBlocks += 1
-                        seen[state[z][xaxis]] = True
-            for z in range(head, -1, -1):
-                if state[z][xaxis] != '.':
-                    if state[z][xaxis] not in seen:
-                        headBlocks += 1
-                        seen[state[z][xaxis]] = True
-    if tailBlocks < headBlocks:
-        return horizontalBlocks + tailBlocks
+    if state[2][5] == state[1][5] or state[2][5] == state[3][5]:
+        return horizontalBlocks - 1
     else:
-        return horizontalBlocks + headBlocks
+        return horizontalBlocks
 
 
 def numberOfBlockingVehiclesHeuristic(state, **kwargs):
@@ -577,7 +550,7 @@ def readInput(filename):
 if __name__ == '__main__':
     games = readInput('sample-input.txt')
     heurestics = {"h1": numberOfBlockingVehiclesHeuristic, "h2": numberOfBlockingVehiclesHeuristicScaled,
-                  "h3": numberOfBlockingPositions, "h4": minClearable}
+                  "h3": numberOfBlockingPositions, "h4": yCanLeave}
 
     i = 1
     for game in games:

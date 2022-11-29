@@ -1,5 +1,24 @@
 --------------------------------------------------------------------------------
-Initial board configuration: .F.KKK.F........AADMM...D..NNN.GG.BB
+Initial board configuration: .F.KKK.F......AA..DMM...D..NNN.GG.BB
+
+.F.KKK
+.F....
+..AA..
+DMM...
+D..NNN
+.GG.BB
+Car fuel available: Car fuel available: F:100, K:100, A:100, D:100, M:100, N:100, G:100, B:100, 
+
+Runtime:0.014624seconds
+
+Search path length:14
+
+Solution path length:1moves
+
+Solution path: A right 2; 
+
+A right 2       98 .F.KKK.F........AADMM...D..NNN.GG.BB  A98
+
 
 .F.KKK
 .F....
@@ -7,15 +26,3 @@ Initial board configuration: .F.KKK.F........AADMM...D..NNN.GG.BB
 DMM...
 D..NNN
 .GG.BB
-Car fuel available: Car fuel available: F:100, K:100, A:100, D:100, M:100, N:100, G:100, B:100, 
-
-Runtime:6e-06seconds
-
-Search path length:0
-
-Solution path length:0moves
-
-Solution path:
-
-
-

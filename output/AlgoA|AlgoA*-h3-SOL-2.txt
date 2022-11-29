@@ -9,7 +9,7 @@ GH.KM.
 MGFFL.
 Car fuel available: Car fuel available: B:100, J:100, I:100, D:100, K:100, H:100, A:100, M:100, G:100, F:100, L:100, 
 
-Runtime:0.018062seconds
+Runtime:0.01818seconds
 
 Search path length:24
 

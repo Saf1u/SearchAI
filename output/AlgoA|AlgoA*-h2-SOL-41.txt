@@ -9,7 +9,7 @@ KKBBCC
 ..EE..
 Car fuel available: Car fuel available: H:100, F:100, G:100, A:100, N:100, K:100, B:100, C:100, E:100, 
 
-Runtime:0.102377seconds
+Runtime:0.116597seconds
 
 Search path length:134
 
