@@ -1,0 +1,54 @@
+--------------------------------------------------------------------------------
+Initial board configuration: ...GG....CDDAABCF...B.F.NNNMMM..HHH.
+
+...GG.
+...CDD
+AABCF.
+..B.F.
+NNNMMM
+..HHH.
+Car fuel available: Car fuel available: G:100, C:100, D:100, A:100, B:100, F:100, N:100, M:100, H:100, 
+
+Runtime:0.126211seconds
+
+Search path length:211
+
+Solution path length:27moves
+
+Solution path: G left  2;  H left  2;  B up    1;  H right 3;  C down  1;  H left  2;  D left  1;  H left  1;  B down  1;  H right 3;  D left  3;  F up    2;  C up    2;  B up    1;  H left  1;  F down  2;  C down  1;  F up    1;  G left  1;  H left  2;  F up    1;  C down  1;  H right 2;  B up    1;  H right 1;  C up    2;  A right 4; 
+
+G left  2       98 .GG......CDDAABCF...B.F.NNNMMM..HHH.  G98
+H left  2       98 .GG......CDDAABCF...B.F.NNNMMMHHH...  G98 H98
+B up    1       99 .GG.....BCDDAABCF.....F.NNNMMMHHH...  G98 B99 H98
+H right 3       95 .GG.....BCDDAABCF.....F.NNNMMM...HHH  G98 B99 H95
+C down  1       99 .GG.....B.DDAABCF....CF.NNNMMM...HHH  G98 C99 B99 H95
+H left  2       93 .GG.....B.DDAABCF....CF.NNNMMM.HHH..  G98 C99 B99 H93
+D left  1       99 .GG.....BDD.AABCF....CF.NNNMMM.HHH..  G98 C99 D99 B99 H93
+H left  1       92 .GG.....BDD.AABCF....CF.NNNMMMHHH...  G98 C99 D99 B99 H92
+B down  1       98 .GG......DD.AABCF...BCF.NNNMMMHHH...  G98 C99 D99 B98 H92
+H right 3       89 .GG......DD.AABCF...BCF.NNNMMM...HHH  G98 C99 D99 B98 H89
+D left  3       96 .GG...DD....AABCF...BCF.NNNMMM...HHH  G98 C99 D96 B98 H89
+F up    2       98 .GG.F.DD..F.AABC....BC..NNNMMM...HHH  G98 C99 D96 B98 F98 H89
+C up    2       97 .GGCF.DD.CF.AAB.....B...NNNMMM...HHH  G98 C97 D96 B98 F98 H89
+B up    1       97 .GGCF.DDBCF.AAB.........NNNMMM...HHH  G98 C97 D96 B97 F98 H89
+H left  1       88 .GGCF.DDBCF.AAB.........NNNMMM..HHH.  G98 C97 D96 B97 F98 H88
+F down  2       96 .GGC..DDBC..AAB.F.....F.NNNMMM..HHH.  G98 C97 D96 B97 F96 H88
+C down  1       96 .GG...DDBC..AABCF.....F.NNNMMM..HHH.  G98 C96 D96 B97 F96 H88
+F up    1       95 .GG...DDBCF.AABCF.......NNNMMM..HHH.  G98 C96 D96 B97 F95 H88
+G left  1       97 GG....DDBCF.AABCF.......NNNMMM..HHH.  G97 C96 D96 B97 F95 H88
+H left  2       86 GG....DDBCF.AABCF.......NNNMMMHHH...  G97 C96 D96 B97 F95 H86
+F up    1       94 GG..F.DDBCF.AABC........NNNMMMHHH...  G97 C96 D96 B97 F94 H86
+C down  1       95 GG..F.DDB.F.AABC.....C..NNNMMMHHH...  G97 C95 D96 B97 F94 H86
+H right 2       84 GG..F.DDB.F.AABC.....C..NNNMMM..HHH.  G97 C95 D96 B97 F94 H84
+B up    1       96 GGB.F.DDB.F.AA.C.....C..NNNMMM..HHH.  G97 C95 D96 B96 F94 H84
+H right 1       83 GGB.F.DDB.F.AA.C.....C..NNNMMM...HHH  G97 C95 D96 B96 F94 H83
+C up    2       93 GGBCF.DDBCF.AA..........NNNMMM...HHH  G97 C93 D96 B96 F94 H83
+A right 4       96 GGBCF.DDBCF.....AA......NNNMMM...HHH  G97 C93 D96 A96 B96 F94 H83
+
+
+GGBCF.
+DDBCF.
+....AA
+......
+NNNMMM
+...HHH

@@ -1,15 +1,28 @@
-no solution--------------------------------------------------------------------------------
-Initial board configuration: IJBBCCIJDDL.IJAAL.EEK.L...KFF..GGHH.
+--------------------------------------------------------------------------------
+Initial board configuration: BB.G.HE..G.HEG.AA..FCCIDDF..I..F....
 
-IJBBCC
-IJDDL.
-IJAAL.
-EEK.L.
-..KFF.
-.GGHH.
-Car fuel available: Car fuel available: I:100, J:100, B:100, C:100, D:100, L:100, A:100, E:100, K:100, F:0, G:6, H:100, 
+BB.G.H
+E..G.H
+EG.AA.
+.FCCID
+DF..I.
+.F....
+Car fuel available: Car fuel available: B:100, G:100, H:100, E:100, A:100, F:100, C:100, I:100, D:100, 
 
-no solution found
+Runtime:0.002947seconds
 
-Runtime:0.170875seconds
+Search path length:6
 
+Solution path length:1moves
+
+Solution path: A right 1; 
+
+A right 1       99 BB.G.HE..G.HEG..AA.FCCIDDF..I..F....  A99
+
+
+BB.G.H
+E..G.H
+EG..AA
+.FCCID
+DF..I.
+.F....

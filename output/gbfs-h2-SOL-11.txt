@@ -1,0 +1,15 @@
+no solution--------------------------------------------------------------------------------
+Initial board configuration: JJJCCCJDD..MMMAAL.MFFKL.N..KGGN.HH..
+
+JJJCCC
+JDD..M
+MMAAL.
+MFFKL.
+N..KGG
+N.HH..
+Car fuel available: Car fuel available: J:100, C:100, D:100, M:100, A:100, L:100, F:100, K:100, N:100, G:100, H:100, 
+
+no solution found
+
+Runtime:0.040405seconds
+

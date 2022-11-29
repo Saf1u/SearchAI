@@ -1,35 +1,39 @@
 --------------------------------------------------------------------------------
-Initial board configuration: BBIJ....IJCC..IAAMGDDK.MGH.KL.GHFFL.
+Initial board configuration: IIBJ....CCCC..KAAMGDDK.HGM.LK.FFGLH.
 
-BBIJ..
-..IJCC
-..IAAM
-GDDK.M
-GH.KL.
-GHFFL.
-Car fuel available: Car fuel available: B:100, I:100, J:100, C:100, A:100, M:100, G:100, D:100, K:100, H:100, L:100, F:100, 
+IIBJ..
+..CCCC
+..KAAM
+GDDK.H
+GM.LK.
+FFGLH.
+Car fuel available: Car fuel available: I:100, B:100, J:100, C:100, K:100, A:100, M:100, G:100, D:100, H:100, L:100, F:100, 
 
-Runtime:0.022443seconds
+Runtime:0.044214seconds
 
-Search path length:40
+Search path length:79
 
-Solution path length:8moves
+Solution path length:12moves
 
-Solution path: M down  1;  L up    1;  F right 2;  K down  1;  D right 1;  H up    3;  D left  1;  A right 1; 
+Solution path: J right 1;  H left  1;  G up    1;  K left  1;  A left  1;  H right 1;  M left  1;  M right 1;  M left  1;  H left  1;  M right 2;  A right 2; 
 
-M down  1       99 BBIJ....IJCC..IAA.GDDK.MGH.KLMGHFFL.  M99
-L up    1       99 BBIJ....IJCC..IAA.GDDKLMGH.KLMGHFF..  M99 L99
-F right 2       98 BBIJ....IJCC..IAA.GDDKLMGH.KLMGH..FF  M99 L99 F98
-K down  1       99 BBIJ....IJCC..IAA.GDD.LMGH.KLMGH.KFF  M99 K99 L99 F98
-D right 1       99 BBIJ....IJCC..IAA.G.DDLMGH.KLMGH.KFF  M99 D99 K99 L99 F98
-H up    3       97 BBIJ...HIJCC.HIAA.G.DDLMG..KLMG..KFF  M99 D99 K99 H97 L99 F98
-D left  1       98 BBIJ...HIJCC.HIAA.GDD.LMG..KLMG..KFF  M99 D98 K99 H97 L99 F98
-A right 1       99 BBIJ...HIJCC.HI.AAGDD.LMG..KLMG..KFF  A99 M99 D98 K99 H97 L99 F98
+J right 1       99 IIB.J...CCCC..KAAMGDDK.HGM.LK.FFGLH.  J99
+H left  1       99 IIB.J...CCCC..KAAMGDDKH.GM.LK.FFGLH.  J99 H99
+G up    1       99 IIB.J...CCCCG.KAAMGDDKH..M.LK.FFGLH.  J99 G99 H99
+K left  1       99 IIB.J...CCCCGK.AAMGDDKH..M.LK.FFGLH.  J99 K99 G99 H99
+A left  1       99 IIB.J...CCCCGKAA.MGDDKH..M.LK.FFGLH.  J99 K99 A99 G99 H99
+H right 1       98 IIB.J...CCCCGKAA.MGDDK.H.M.LK.FFGLH.  J99 K99 A99 G99 H98
+M left  1       99 IIB.J...CCCCGKAAM.GDDK.H.M.LK.FFGLH.  J99 K99 A99 M99 G99 H98
+M right 1       98 IIB.J...CCCCGKAA..GDDK.H.M.LK.FFGLH.  J99 K99 A99 M98 G99 H98
+M left  1       97 IIB.J...CCCCGKAA..GDDK.HM..LK.FFGLH.  J99 K99 A99 M97 G99 H98
+H left  1       97 IIB.J...CCCCGKAA..GDDKH.M..LK.FFGLH.  J99 K99 A99 M97 G99 H97
+M right 2       95 IIB.J...CCCCGKAA..GDDKH...MLK.FFGLH.  J99 K99 A99 M95 G99 H97
+A right 2       97 IIB.J...CCCCGK..AAGDDKH...MLK.FFGLH.  J99 K99 A97 M95 G99 H97
 
 
-BBIJ..
-.HIJCC
-.HI.AA
-GDD.LM
-G..KLM
-G..KFF
+IIB.J.
+..CCCC
+GK..AA
+GDDKH.
+..MLK.
+FFGLH.

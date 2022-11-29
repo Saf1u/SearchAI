@@ -1,0 +1,51 @@
+--------------------------------------------------------------------------------
+Initial board configuration: DDFFNNGG..MMAA..CC....BBJ.LL..J..EEE
+
+DDFFNN
+GG..MM
+AA..CC
+....BB
+J.LL..
+J..EEE
+Car fuel available: Car fuel available: D:100, F:100, N:100, G:100, M:100, A:100, C:100, B:100, J:100, L:100, E:100, 
+
+Runtime:0.210545seconds
+
+Search path length:225
+
+Solution path length:24moves
+
+Solution path: G right 1;  E left  1;  L left  1;  J up    1;  E left  2;  L right 2;  B left  3;  E right 2;  L left  1;  E left  1;  L right 2;  C left  2;  E right 1;  L left  3;  E left  2;  C right 2;  E right 3;  L right 3;  B right 1;  E left  2;  L left  3;  B right 2;  E right 1;  A right 4; 
+
+G right 1       99 DDFFNN.GG.MMAA..CC....BBJ.LL..J..EEE  G99
+E left  1       99 DDFFNN.GG.MMAA..CC....BBJ.LL..J.EEE.  G99 E99
+L left  1       99 DDFFNN.GG.MMAA..CC....BBJLL...J.EEE.  G99 L99 E99
+J up    1       99 DDFFNN.GG.MMAA..CCJ...BBJLL.....EEE.  G99 J99 L99 E99
+E left  2       97 DDFFNN.GG.MMAA..CCJ...BBJLL...EEE...  G99 J99 L99 E97
+L right 2       97 DDFFNN.GG.MMAA..CCJ...BBJ..LL.EEE...  G99 J99 L97 E97
+B left  3       97 DDFFNN.GG.MMAA..CCJBB...J..LL.EEE...  G99 B97 J99 L97 E97
+E right 2       95 DDFFNN.GG.MMAA..CCJBB...J..LL...EEE.  G99 B97 J99 L97 E95
+L left  1       96 DDFFNN.GG.MMAA..CCJBB...J.LL....EEE.  G99 B97 J99 L96 E95
+E left  1       94 DDFFNN.GG.MMAA..CCJBB...J.LL...EEE..  G99 B97 J99 L96 E94
+L right 2       94 DDFFNN.GG.MMAA..CCJBB...J...LL.EEE..  G99 B97 J99 L94 E94
+C left  2       98 DDFFNN.GG.MMAACC..JBB...J...LL.EEE..  G99 C98 B97 J99 L94 E94
+E right 1       93 DDFFNN.GG.MMAACC..JBB...J...LL..EEE.  G99 C98 B97 J99 L94 E93
+L left  3       91 DDFFNN.GG.MMAACC..JBB...JLL.....EEE.  G99 C98 B97 J99 L91 E93
+E left  2       91 DDFFNN.GG.MMAACC..JBB...JLL...EEE...  G99 C98 B97 J99 L91 E91
+C right 2       96 DDFFNN.GG.MMAA....JBB...JLL...EEE...  G99 C96 B97 J99 L91 E91
+E right 3       88 DDFFNN.GG.MMAA....JBB...JLL......EEE  G99 C96 B97 J99 L91 E88
+L right 3       88 DDFFNN.GG.MMAA....JBB...J...LL...EEE  G99 C96 B97 J99 L88 E88
+B right 1       96 DDFFNN.GG.MMAA....J.BB..J...LL...EEE  G99 C96 B96 J99 L88 E88
+E left  2       86 DDFFNN.GG.MMAA....J.BB..J...LL.EEE..  G99 C96 B96 J99 L88 E86
+L left  3       85 DDFFNN.GG.MMAA....J.BB..JLL....EEE..  G99 C96 B96 J99 L85 E86
+B right 2       94 DDFFNN.GG.MMAA....J...BBJLL....EEE..  G99 C96 B94 J99 L85 E86
+E right 1       85 DDFFNN.GG.MMAA....J...BBJLL.....EEE.  G99 C96 B94 J99 L85 E85
+A right 4       96 DDFFNN.GG.MM....AAJ...BBJLL.....EEE.  G99 A96 C96 B94 J99 L85 E85
+
+
+DDFFNN
+.GG.MM
+....AA
+J...BB
+JLL...
+..EEE.

@@ -1,0 +1,16 @@
+0  0 0 LL..B.....BNAA...NMMGGFFH...DDH.....
+1  1 0 .LL.B.....BNAA...NMMGGFFH...DDH..... L99
+1  1 0 LL........BNAA..BNMMGGFFH...DDH..... B99
+1  1 0 LL..B.....BN...AANMMGGFFH...DDH..... A97
+1  1 0 LL..B.....BNAA...NMMGGFFHDD...H..... D97
+1  1 0 LL..B.....BN..AA.NMMGGFFH...DDH..... A98
+1  1 0 ..LLB.....BNAA...NMMGGFFH...DDH..... L98
+1  1 0 LL..B.....BN.AA..NMMGGFFH...DDH..... A99
+1  1 0 LL..BN....BNAA....MMGGFFH...DDH..... N99
+1  1 0 LL..B.....BNAA...NMMGGFFH.DD..H..... D98
+1  1 0 LL..B.....BNAA...NMMGGFFH..DD.H..... D99
+2  2 0 .LL.B.....BNAA...NMMGGFFH..DD.H..... L99 D99
+2  2 0 .LL.B.....BNAA...NMMGGFFHDD...H..... L99 D97
+2  2 0 LL..B.....BN...AANMMGGFFHDD...H..... A97 D97
+2  2 0 LL..B.....BN.AA..NMMGGFFHDD...H..... A99 D97
+2  2 0 LL..BN....BNAA....MMGGFFH..DD.H..... N99 D99

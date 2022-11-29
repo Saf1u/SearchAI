@@ -1,0 +1,15 @@
+no solution--------------------------------------------------------------------------------
+Initial board configuration: IIGJ....IJCC..AAMGDDK.MGH.KL.GHFFL.L
+
+IIGJ..
+..IJCC
+..AAMG
+DDK.MG
+H.KL.G
+HFFL.L
+Car fuel available: Car fuel available: I:100, G:100, J:100, C:100, A:100, M:100, D:100, K:100, H:100, L:100, F:100, 
+
+no solution found
+
+Runtime:0.957791seconds
+

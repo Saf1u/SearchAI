@@ -293,7 +293,11 @@ class gamePlayer:
                     myFile.write('\n')
                 myFile.write('\n')
                 myFile.write('\n')
-                myFile.write(prettyPrint(searchPath[len(searchPath) - 1].gameboard))
+                if len(searchPath) > 1:
+                    myFile.write(prettyPrint(searchPath[len(searchPath) - 1].gameboard))
+                else:
+                    if len(searchPath) == 1:
+                        myFile.write(prettyPrint(searchPath[0].gameboard))
                 if not os.path.exists('./output/analysis.csv'):
                     with open("./output/" + "analysis" + ".csv", "a+") as analysisFile:
                         analysisFile.write(
@@ -600,3 +604,4 @@ if __name__ == '__main__':
             newGame.writeSearchFile('AlgoA|AlgoA*-' + str(heurestic), i)
             newGame.writeToSolution('AlgoA|AlgoA*-' + str(heurestic), i)
         i += 1
+        print('puzzle:' + str(i) + ' done')

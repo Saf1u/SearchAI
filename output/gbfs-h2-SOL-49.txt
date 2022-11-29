@@ -1,0 +1,53 @@
+--------------------------------------------------------------------------------
+Initial board configuration: MNN...MGGBBBAA..CCF..LLDF....DHHH...
+
+MNN...
+MGGBBB
+AA..CC
+F..LLD
+F....D
+HHH...
+Car fuel available: Car fuel available: M:100, N:100, G:100, B:100, A:100, C:100, F:100, L:100, D:100, H:100, 
+
+Runtime:0.181944seconds
+
+Search path length:236
+
+Solution path length:26moves
+
+Solution path: H right 3;  L left  2;  H left  2;  N right 3;  L right 1;  H right 2;  C left  2;  H left  3;  C right 2;  H right 2;  D up    1;  H left  1;  N left  2;  H left  1;  L left  1;  H right 3;  L right 2;  H left  1;  F down  1;  L left  3;  D down  2;  H left  1;  D up    1;  H right 2;  L right 3;  A right 4; 
+
+H right 3       97 MNN...MGGBBBAA..CCF..LLDF....D...HHH  H97
+L left  2       98 MNN...MGGBBBAA..CCFLL..DF....D...HHH  L98 H97
+H left  2       95 MNN...MGGBBBAA..CCFLL..DF....D.HHH..  L98 H95
+N right 3       97 M...NNMGGBBBAA..CCFLL..DF....D.HHH..  N97 L98 H95
+L right 1       97 M...NNMGGBBBAA..CCF.LL.DF....D.HHH..  N97 L97 H95
+H right 2       93 M...NNMGGBBBAA..CCF.LL.DF....D...HHH  N97 L97 H93
+C left  2       98 M...NNMGGBBBAACC..F.LL.DF....D...HHH  N97 C98 L97 H93
+H left  3       90 M...NNMGGBBBAACC..F.LL.DF....DHHH...  N97 C98 L97 H90
+C right 2       96 M...NNMGGBBBAA....F.LL.DF....DHHH...  N97 C96 L97 H90
+H right 2       88 M...NNMGGBBBAA....F.LL.DF....D..HHH.  N97 C96 L97 H88
+D up    1       99 M...NNMGGBBBAA...DF.LL.DF.......HHH.  N97 C96 L97 D99 H88
+H left  1       87 M...NNMGGBBBAA...DF.LL.DF......HHH..  N97 C96 L97 D99 H87
+N left  2       95 M.NN..MGGBBBAA...DF.LL.DF......HHH..  N95 C96 L97 D99 H87
+H left  1       86 M.NN..MGGBBBAA...DF.LL.DF.....HHH...  N95 C96 L97 D99 H86
+L left  1       96 M.NN..MGGBBBAA...DFLL..DF.....HHH...  N95 C96 L96 D99 H86
+H right 3       83 M.NN..MGGBBBAA...DFLL..DF........HHH  N95 C96 L96 D99 H83
+L right 2       94 M.NN..MGGBBBAA...DF..LLDF........HHH  N95 C96 L94 D99 H83
+H left  1       82 M.NN..MGGBBBAA...DF..LLDF.......HHH.  N95 C96 L94 D99 H82
+F down  1       99 M.NN..MGGBBBAA...D...LLDF.....F.HHH.  N95 C96 F99 L94 D99 H82
+L left  3       91 M.NN..MGGBBBAA...DLL...DF.....F.HHH.  N95 C96 F99 L91 D99 H82
+D down  2       97 M.NN..MGGBBBAA....LL....F....DF.HHHD  N95 C96 F99 L91 D97 H82
+H left  1       81 M.NN..MGGBBBAA....LL....F....DFHHH.D  N95 C96 F99 L91 D97 H81
+D up    1       96 M.NN..MGGBBBAA....LL...DF....DFHHH..  N95 C96 F99 L91 D96 H81
+H right 2       79 M.NN..MGGBBBAA....LL...DF....DF..HHH  N95 C96 F99 L91 D96 H79
+L right 3       88 M.NN..MGGBBBAA.......LLDF....DF..HHH  N95 C96 F99 L88 D96 H79
+A right 4       96 M.NN..MGGBBB....AA...LLDF....DF..HHH  N95 A96 C96 F99 L88 D96 H79
+
+
+M.NN..
+MGGBBB
+....AA
+...LLD
+F....D
+F..HHH

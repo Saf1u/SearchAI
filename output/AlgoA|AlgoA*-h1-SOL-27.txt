@@ -1,0 +1,15 @@
+no solution--------------------------------------------------------------------------------
+Initial board configuration: FDD...FJJ..CG..AACG....CM..NN.MBBEEE
+
+FDD...
+FJJ..C
+G..AAC
+G....C
+M..NN.
+MBBEEE
+Car fuel available: Car fuel available: F:100, D:100, J:100, C:100, G:100, A:100, M:100, N:100, B:100, E:100, 
+
+no solution found
+
+Runtime:0.258283seconds
+

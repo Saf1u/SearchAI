@@ -1,0 +1,15 @@
+no solution--------------------------------------------------------------------------------
+Initial board configuration: BBI...C.IGGGC.AAD.....D.EEEFFN.....N
+
+BBI...
+C.IGGG
+C.AAD.
+....D.
+EEEFFN
+.....N
+Car fuel available: Car fuel available: B:100, I:100, C:100, G:100, A:100, D:100, E:100, F:100, N:100, 
+
+no solution found
+
+Runtime:0.258281seconds
+

@@ -1,0 +1,52 @@
+--------------------------------------------------------------------------------
+Initial board configuration: ....DD..BBCCAA..EFGGHHEF...IEF...IJJ
+
+....DD
+..BBCC
+AA..EF
+GGHHEF
+...IEF
+...IJJ
+Car fuel available: Car fuel available: D:100, B:100, C:100, A:100, E:100, F:100, G:100, H:100, I:100, J:100, 
+
+Runtime:0.114159seconds
+
+Search path length:201
+
+Solution path length:25moves
+
+Solution path: A right 1;  D left  4;  B left  2;  A left  1;  C left  2;  F up    2;  E up    2;  H right 2;  I up    2;  J left  4;  G right 1;  J right 3;  I down  1;  J left  2;  I down  1;  H left  1;  G left  1;  A right 2;  J left  1;  H left  1;  A left  1;  J right 1;  F down  3;  E down  3;  A right 3; 
+
+A right 1       99 ....DD..BBCC.AA.EFGGHHEF...IEF...IJJ  A99
+D left  4       96 DD......BBCC.AA.EFGGHHEF...IEF...IJJ  D96 A99
+B left  2       98 DD....BB..CC.AA.EFGGHHEF...IEF...IJJ  D96 B98 A99
+A left  1       98 DD....BB..CCAA..EFGGHHEF...IEF...IJJ  D96 B98 A98
+C left  2       98 DD....BBCC..AA..EFGGHHEF...IEF...IJJ  D96 B98 C98 A98
+F up    2       98 DD...FBBCC.FAA..EFGGHHE....IE....IJJ  D96 B98 C98 A98 F98
+E up    2       98 DD..EFBBCCEFAA..EFGGHH.....I.....IJJ  D96 B98 C98 A98 E98 F98
+H right 2       98 DD..EFBBCCEFAA..EFGG..HH...I.....IJJ  D96 B98 C98 A98 E98 F98 H98
+I up    2       98 DD..EFBBCCEFAA.IEFGG.IHH..........JJ  D96 B98 C98 A98 E98 F98 H98 I98
+J left  4       96 DD..EFBBCCEFAA.IEFGG.IHH......JJ....  D96 B98 C98 A98 E98 F98 H98 I98 J96
+G right 1       99 DD..EFBBCCEFAA.IEF.GGIHH......JJ....  D96 B98 C98 A98 E98 F98 G99 H98 I98 J96
+J right 3       93 DD..EFBBCCEFAA.IEF.GGIHH.........JJ.  D96 B98 C98 A98 E98 F98 G99 H98 I98 J93
+I down  1       97 DD..EFBBCCEFAA..EF.GGIHH...I.....JJ.  D96 B98 C98 A98 E98 F98 G99 H98 I97 J93
+J left  2       91 DD..EFBBCCEFAA..EF.GGIHH...I...JJ...  D96 B98 C98 A98 E98 F98 G99 H98 I97 J91
+I down  1       96 DD..EFBBCCEFAA..EF.GG.HH...I...JJI..  D96 B98 C98 A98 E98 F98 G99 H98 I96 J91
+H left  1       97 DD..EFBBCCEFAA..EF.GGHH....I...JJI..  D96 B98 C98 A98 E98 F98 G99 H97 I96 J91
+G left  1       98 DD..EFBBCCEFAA..EFGG.HH....I...JJI..  D96 B98 C98 A98 E98 F98 G98 H97 I96 J91
+A right 2       96 DD..EFBBCCEF..AAEFGG.HH....I...JJI..  D96 B98 C98 A96 E98 F98 G98 H97 I96 J91
+J left  1       90 DD..EFBBCCEF..AAEFGG.HH....I..JJ.I..  D96 B98 C98 A96 E98 F98 G98 H97 I96 J90
+H left  1       96 DD..EFBBCCEF..AAEFGGHH.....I..JJ.I..  D96 B98 C98 A96 E98 F98 G98 H96 I96 J90
+A left  1       95 DD..EFBBCCEF.AA.EFGGHH.....I..JJ.I..  D96 B98 C98 A95 E98 F98 G98 H96 I96 J90
+J right 1       89 DD..EFBBCCEF.AA.EFGGHH.....I...JJI..  D96 B98 C98 A95 E98 F98 G98 H96 I96 J89
+F down  3       95 DD..E.BBCCE..AA.E.GGHH.F...I.F.JJI.F  D96 B98 C98 A95 E98 F95 G98 H96 I96 J89
+E down  3       95 DD....BBCC...AA...GGHHEF...IEF.JJIEF  D96 B98 C98 A95 E95 F95 G98 H96 I96 J89
+A right 3       92 DD....BBCC......AAGGHHEF...IEF.JJIEF  D96 B98 C98 A92 E95 F95 G98 H96 I96 J89
+
+
+DD....
+BBCC..
+....AA
+GGHHEF
+...IEF
+.JJIEF

@@ -1,0 +1,418 @@
+0  0 0 ....M...B.M.AABGM....G.....G....EE..
+1  1 0 ........B.M.AABGM....GM....G....EE.. M99
+1  1 0 ........B...AABG.....GM....GM...EEM. M97
+1  1 0 ....M...BGM.AABGM....G..........EE.. G99
+1  1 0 ....M...B.M.AABGM....G.....G..EE.... E98
+1  1 0 ..B.M...B.M.AA.GM....G.....G....EE.. B99
+1  1 0 ........B...AABGM....GM....GM...EE.. M98
+1  1 0 ....M.....M.AA.GM...BG....BG....EE.. B98
+1  1 0 ....M...B.M.AABGM....G.....G...EE... E99
+1  1 0 ....M...B.M.AABGM....G.....G......EE E98
+1  1 0 ....M.....M.AABGM...BG.....G....EE.. B99
+1  1 0 ....M...B.M.AABGM....G.....G.....EE. E99
+1  1 0 ...GM...BGM.AABGM...............EE.. G98
+2  2 0 ........BGM.AABGM....GM.........EE.. M99 G99
+2  2 0 ........B.M.AABGM....GM....G..EE.... M99 E98
+2  2 0 ....M...BGM.AABGM....G............EE G99 E98
+2  2 0 ....M...BGM.AABGM....G........EE.... G99 E98
+2  2 0 ...GM...BGM.AABGM................EE. G98 E99
+2  2 0 ....M.....M.AA.GM....G....BG....BEE. B97 E99
+2  2 0 ....M...BGM.AABGM....G...........EE. G99 E99
+2  2 0 ..B.....B.M.AA.GM....GM....G....EE.. M99 B99
+2  2 0 ..B.M...BGM.AA.GM....G..........EE.. B99 G99
+2  2 0 ...GM....GM.AABGM...B...........EE.. B99 G98
+2  2 0 ....M....GM.AA.GM...BG....B.....EE.. B98 G99
+2  2 0 ....M...B.M.AAB.M....G.....G.....GEE G99 E98
+2  2 0 ....M.....M.AA.GM....G....BG....B.EE B97 E98
+2  2 0 ..........M.AA.GM...BGM...BG....EE.. M99 B98
+2  2 0 ........B...AABG.....GM....GM.EE..M. M97 E98
+2  2 0 ....M....GM.AABGM...BG..........EE.. B99 G99
+2  2 0 ....M.....M.AABGM...BG.....G......EE B99 E98
+2  2 0 ....M...B.M.AAB.M....G.....G...EEG.. G99 E99
+2  2 0 ........BG..AABGM....GM.....M...EE.. M98 G99
+2  2 0 ....M.....M.AABGM...BG.....G...EE... B99 E99
+2  2 0 ....M.....M.AA.GM...BG....BG......EE B98 E98
+2  2 0 ..........M.AABGM...BGM....G....EE.. M99 B99
+2  2 0 ........B...AABG.....GM....GM..EE.M. M97 E99
+2  2 0 ....M.....M.AA.GM...BG....BG.....EE. B98 E99
+2  2 0 ...GM....GM.AA.GM...B.....B.....EE.. B98 G98
+2  2 0 ...G....BG..AABG......M.....M...EEM. M97 G98
+2  2 0 ....M.....M..AAGM...BG....BG....EE.. B98 A99
+2  2 0 ........B...AABGM....GM....GM.....EE M98 E98
+2  2 0 ........BG..AABG.....GM.....M...EEM. M97 G99
+2  2 0 ...GM...BGM.AABGM.............EE.... G98 E98
+2  2 0 ........B...AABGM....GM....GM....EE. M98 E99
+2  2 0 ........B...AABGM....GM....GM..EE... M98 E99
+2  2 0 ....M.....M.AABGM...BG.....G.....EE. B99 E99
+2  2 0 ...G....BG..AABGM.....M.....M...EE.. M98 G98
+2  2 0 ..B.....B...AA.G.....GM....GM...EEM. M97 B99
+2  2 0 ............AA.GM...BGM...BGM...EE.. M98 B98
+2  2 0 ............AABGM...BGM....GM...EE.. M98 B99
+2  2 0 ............AA.G....BGM...BGM...EEM. M97 B98
+2  2 0 ..B.M...B.M.AA.GM....G.....G......EE B99 E98
+2  2 0 ..B.M...B.M.AA.GM....G.....G...EE... B99 E99
+2  2 0 ..B.M...B.M.AA.GM....G.....G.....EE. B99 E99
+2  2 0 ............AABG....BGM....GM...EEM. M97 B99
+2  2 0 ..BGM...BGM.AA.GM...............EE.. B99 G98
+2  2 0 ..B.M...B.M..AAGM....G.....G....EE.. B99 A99
+2  2 0 ........B.M.AABGM....GM....G...EE... M99 E99
+2  2 0 ..B.....B...AA.GM....GM....GM...EE.. M98 B99
+2  2 0 ....M.....M.AA.GM...BG....BG...EE... B98 E99
+2  2 0 ...GM...BGM.AABGM.................EE G98 E98
+2  2 0 ....M...B.M.AAB.M....G.....G..EE.G.. G99 E98
+2  2 0 ........B.M.AABGM....GM....G......EE M99 E98
+2  2 0 ..B.M...B.M.AA.GM....G.....G..EE.... B99 E98
+2  2 0 ....M.....M.AA.GM....G....BG..EEB... B97 E98
+2  2 0 ........B.M.AABGM....GM....G.....EE. M99 E99
+2  2 0 ....M.....M.AA.GM...BG....BG..EE.... B98 E98
+2  2 0 ...GM...BGM.AABGM..............EE... G98 E99
+2  2 0 ....M.....M.AABGM...BG.....G..EE.... B99 E98
+2  2 0 ...G....BGM.AABGM.....M.........EE.. M99 G98
+2  2 0 ........B...AABGM....GM....GM.EE.... M98 E98
+2  2 0 ....M...BGM.AABGM....G.........EE... G99 E99
+3  3 0 ........BGM.AABGM....GM...........EE M99 G99 E98
+3  3 0 ........BGM.AABGM....GM.......EE.... M99 G99 E98
+3  3 0 ..B.M...BGM.AA.GM....G............EE B99 G99 E98
+3  3 0 ...GM....GM.AABGM...B.........EE.... B99 G98 E98
+3  3 0 ........B...AAB......GM....GM..EEGM. M97 G99 E99
+3  3 0 ..BG....BG..AA.G......M.....M...EEM. M97 B99 G98
+3  3 0 ...GM....GM.AA.GM.........B...EEB... B97 G98 E98
+3  3 0 ...G....BG..AABGM.....M.....M.EE.... M98 G98 E98
+3  3 0 ........B...AAB.M....GM....GM..EEG.. M98 G99 E99
+3  3 0 ........BGM.AABGM....GM..........EE. M99 G99 E99
+3  3 0 ........B.M.AAB.M....GM....G...EEG.. M99 G99 E99
+3  3 0 ..........M.AABGM...BGM....G......EE M99 B99 E98
+3  3 0 ..B.....BGM.AA.GM....GM.........EE.. M99 B99 G99
+3  3 0 ...G....BGM.AABGM.....M.......EE.... M99 G98 E98
+3  3 0 .........G..AABG....BGM.....M...EEM. M97 B99 G99
+3  3 0 .........G..AABGM...BGM.....M...EE.. M98 B99 G99
+3  3 0 .........GM.AA.GM...BGM...B.....EE.. M99 B98 G99
+3  3 0 ........B...AAB......GM....GM.EE.GM. M97 G99 E98
+3  3 0 ..B.....B...AA.G.....GM....GM.EE..M. M97 B99 E98
+3  3 0 .........GM.AABGM...BGM.........EE.. M99 B99 G99
+3  3 0 ..BGM...BGM.AA.GM................EE. B99 G98 E99
+3  3 0 ..B.M...BGM.AA.GM....G.........EE... B99 G99 E99
+3  3 0 ............AA.G.....GM...BGM.EEB.M. M97 B97 E98
+3  3 0 ............AA.G....BGM...BGM.EE..M. M97 B98 E98
+3  3 0 ..B.M...BGM.AA.GM....G........EE.... B99 G99 E98
+3  3 0 ............AABG....BGM....GM.EE..M. M97 B99 E98
+3  3 0 ..........M.AA.GM...BGM...BG......EE M99 B98 E98
+3  3 0 ....M....GM.AA.GM....G....B.....BEE. B97 G99 E99
+3  3 0 ..B.....B.M.AA.GM....GM....G...EE... M99 B99 E99
+3  3 0 ..........M.AA.GM...BGM...BG.....EE. M99 B98 E99
+3  3 0 ...G.....GM.AA.GM...B.M...B.....EE.. M99 B98 G98
+3  3 0 ..B.M...BGM.AA.GM....G...........EE. B99 G99 E99
+3  3 0 ..........M..AAGM...BGM...BG....EE.. M99 B98 A99
+3  3 0 ....M.....M..AAGM....G....BG....B.EE B97 A99 E98
+3  3 0 ....M....GM.AA.GM...BG....B....EE... B98 G99 E99
+3  3 0 ............AA.GM....GM...BGM...B.EE M98 B97 E98
+3  3 0 ...GM....GM.AA.GM.........B.....B.EE B97 G98 E98
+3  3 0 ............AABGM...BGM....GM.....EE M98 B99 E98
+3  3 0 ...GM....GM.AA.GM...B.....B...EE.... B98 G98 E98
+3  3 0 ..........M.AA.GM....GM...BG....B.EE M99 B97 E98
+3  3 0 ....M.....M.AA..M....G....BG....BGEE B97 G99 E98
+3  3 0 ..B.M...B.M.AA..M....G.....G.....GEE B99 G99 E98
+3  3 0 ....M.....M.AA..M...BG....BG.....GEE B98 G99 E98
+3  3 0 ....M.....M.AAB.M...BG.....G.....GEE B99 G99 E98
+3  3 0 ..........M.AA.GM...BGM...BG...EE... M99 B98 E99
+3  3 0 ....M....GM.AABGM...BG.........EE... B99 G99 E99
+3  3 0 ........B...AAB.M....GM....GM....GEE M98 G99 E98
+3  3 0 ........B.M.AAB.M....GM....G.....GEE M99 G99 E98
+3  3 0 ...G....BG..AABG......M.....M.EE..M. M97 G98 E98
+3  3 0 ....M....GM..AAGM...BG....B.....EE.. B98 A99 G99
+3  3 0 .........G..AA.G....BGM...B.M...EEM. M97 B98 G99
+3  3 0 ..B.M...B.M.AA..M....G.....G...EEG.. B99 G99 E99
+3  3 0 ............AABG....BGM....GM..EE.M. M97 B99 E99
+3  3 0 ....M.....M..AAGM...BG....BG.....EE. B98 A99 E99
+3  3 0 .........G..AA.GM...BGM...B.M...EE.. M98 B98 G99
+3  3 0 ...GM....GM.AABGM...B..........EE... B99 G98 E99
+3  3 0 ........BG..AABGM....GM.....M..EE... M98 G99 E99
+3  3 0 ...GM....GM.AABGM...B.............EE B99 G98 E98
+3  3 0 ...G.....G..AABG....B.M.....M...EEM. M97 B99 G98
+3  3 0 ...GM....GM.AA.GM...B.....B.......EE B98 G98 E98
+3  3 0 ...G....BG..AABG......M.....M..EE.M. M97 G98 E99
+3  3 0 ...G.....G..AABGM...B.M.....M...EE.. M98 B99 G98
+3  3 0 ...G.....GM.AABGM...B.M.........EE.. M99 B99 G98
+3  3 0 ..........M.AABGM...BGM....G.....EE. M99 B99 E99
+3  3 0 ..B.M...BGM..AAGM....G..........EE.. B99 A99 G99
+3  3 0 ..B.....BG..AA.G.....GM.....M...EEM. M97 B99 G99
+3  3 0 ....M.....M..AAGM...BG....BG..EE.... B98 A99 E98
+3  3 0 ..B.....B...AA.GM....GM....GM.....EE M98 B99 E98
+3  3 0 ..B.....B...AA.GM....GM....GM..EE... M98 B99 E99
+3  3 0 ..B.M...B.M..AAGM....G.....G.....EE. B99 A99 E99
+3  3 0 ..B.....B...AA.GM....GM....GM.EE.... M98 B99 E98
+3  3 0 ..B.....BG..AA.GM....GM.....M...EE.. M98 B99 G99
+3  3 0 ..B.....B.M.AA.GM....GM....G......EE M99 B99 E98
+3  3 0 ...G....BG..AABGM.....M.....M.....EE M98 G98 E98
+3  3 0 ..B.....B.M.AA.GM....GM....G.....EE. M99 B99 E99
+3  3 0 ..BG....BGM.AA.GM.....M.........EE.. M99 B99 G98
+3  3 0 ..BGM...BGM.AA.GM.............EE.... B99 G98 E98
+3  3 0 ...G....BG..AABGM.....M.....M..EE... M98 G98 E99
+3  3 0 ..B.....B.M..AAGM....GM....G....EE.. M99 B99 A99
+3  3 0 ....M....GM.AA.GM...BG....B......EE. B98 G99 E99
+3  3 0 ..B.....B...AA.GM....GM....GM....EE. M98 B99 E99
+3  3 0 ....M....GM.AABGM...BG...........EE. B99 G99 E99
+3  3 0 ........BG..AABGM....GM.....M....EE. M98 G99 E99
+3  3 0 ..BG....BG..AA.GM.....M.....M...EE.. M98 B99 G98
+3  3 0 ............AA.GM...BGM...BGM.EE.... M98 B98 E98
+3  3 0 ..BGM...BGM.AA.GM..............EE... B99 G98 E99
+3  3 0 ....M.....M..AAGM....G....BG....BEE. B97 A99 E99
+3  3 0 ............AA.GM....GM...BGM...BEE. M98 B97 E99
+3  3 0 ..B.....B....AAG.....GM....GM...EEM. M97 B99 A99
+3  3 0 ..........M.AA.GM....GM...BG....BEE. M99 B97 E99
+3  3 0 ...GM....GM.AA.GM.........B.....BEE. B97 G98 E99
+3  3 0 ............AABGM...BGM....GM.EE.... M98 B99 E98
+3  3 0 ..BGM...BGM.AA.GM.................EE B99 G98 E98
+3  3 0 ...GM....GM.AA.GM...B.....B......EE. B98 G98 E99
+3  3 0 ...GM....GM.AABGM...B............EE. B99 G98 E99
+3  3 0 ............AA.GM...BGM...BGM..EE... M98 B98 E99
+3  3 0 ...G....BG..AABGM.....M.....M....EE. M98 G98 E99
+3  3 0 ...G....BGM.AABGM.....M..........EE. M99 G98 E99
+3  3 0 ..B.M...B.M..AAGM....G.....G...EE... B99 A99 E99
+3  3 0 ..B.M...B.M..AAGM....G.....G..EE.... B99 A99 E98
+3  3 0 ...G....BGM.AABGM.....M...........EE M99 G98 E98
+3  3 0 ..B.M...B.M..AAGM....G.....G......EE B99 A99 E98
+3  3 0 ....M....GM.AA.GM....G....B...EEB... B97 G99 E98
+3  3 0 ....M....GM.AA.GM...BG....B...EE.... B98 G99 E98
+3  3 0 ..BGM...BGM..AAGM...............EE.. B99 A99 G98
+3  3 0 ....M....GM.AABGM...BG........EE.... B99 G99 E98
+3  3 0 ........BG..AABG.....GM.....M.EE..M. M97 G99 E98
+3  3 0 ...G....BGM.AABGM.....M........EE... M99 G98 E99
+3  3 0 ..B.....B....AAGM....GM....GM...EE.. M98 B99 A99
+3  3 0 ........BG..AABGM....GM.....M.EE.... M98 G99 E98
+3  3 0 ....M....GM.AA.GM....G....B.....B.EE B97 G99 E98
+3  3 0 ............AABGM...BGM....GM....EE. M98 B99 E99
+3  3 0 ....M....GM.AA.GM...BG....B.......EE B98 G99 E98
+3  3 0 ....M.....M..AAGM...BG....BG...EE... B98 A99 E99
+3  3 0 ....M....GM.AABGM...BG............EE B99 G99 E98
+3  3 0 .............AAG....BGM...BGM...EEM. M97 B98 A99
+3  3 0 ..B.M...B.M.AA..M....G.....G..EE.G.. B99 G99 E98
+3  3 0 ....M.....M.AA..M...BG....BG..EE.G.. B98 G99 E98
+3  3 0 ........B...AAB.M....GM....GM.EE.G.. M98 G99 E98
+3  3 0 .............AAGM...BGM...BGM...EE.. M98 B98 A99
+3  3 0 ........BG..AABGM....GM.....M.....EE M98 G99 E98
+3  3 0 ...GM....GM.AA.GM...B.....B....EE... B98 G98 E99
+3  3 0 ...GM....GM..AAGM...B.....B.....EE.. B98 A99 G98
+3  3 0 ........B.M.AAB.M....GM....G..EE.G.. M99 G99 E98
+3  3 0 ...G.....G..AA.G....B.M...B.M...EEM. M97 B98 G98
+3  3 0 ....M.....M.AA..M....G....BG..EEBG.. B97 G99 E98
+3  3 0 ...G.....G..AA.GM...B.M...B.M...EE.. M98 B98 G98
+3  3 0 ..B.....B.M.AA.GM....GM....G..EE.... M99 B99 E98
+3  3 0 ............AA.GM...BGM...BGM....EE. M98 B98 E99
+3  3 0 ........BG..AABG.....GM.....M..EE.M. M97 G99 E99
+3  3 0 ..........M.AA.GM....GM...BG..EEB... M99 B97 E98
+3  3 0 ..B.....B...AA.G.....GM....GM..EE.M. M97 B99 E99
+3  3 0 ....M.....M..AAGM....G....BG..EEB... B97 A99 E98
+3  3 0 ....M.....M.AAB.M...BG.....G..EE.G.. B99 G99 E98
+3  3 0 ............AA.G....BGM...BGM..EE.M. M97 B98 E99
+3  3 0 ..........M.AA.GM...BGM...BG..EE.... M99 B98 E98
+3  3 0 ....M.....M..AAGM...BG....BG......EE B98 A99 E98
+3  3 0 ............AA.GM...BGM...BGM.....EE M98 B98 E98
+3  3 0 ..........M.AABGM...BGM....G..EE.... M99 B99 E98
+3  3 0 ............AABGM...BGM....GM..EE... M98 B99 E99
+3  3 0 ............AA.GM....GM...BGM.EEB... M98 B97 E98
+3  3 0 ..........M.AABGM...BGM....G...EE... M99 B99 E99
+3  3 0 ........BGM.AABGM....GM........EE... M99 G99 E99
+3  3 0 ....M.....M.AA..M...BG....BG...EEG.. B98 G99 E99
+3  3 0 ....M.....M.AAB.M...BG.....G...EEG.. B99 G99 E99
+4  4 0 ..B.....BGM.AA.GM....GM...........EE M99 B99 G99 E98
+4  4 0 ..B.M...BGM..AAGM....G............EE B99 A99 G99 E98
+4  4 0 ...GM....GM..AAGM.........B...EEB... B97 A99 G98 E98
+4  4 0 .........G..AABG....BGM.....M.EE..M. M97 B99 G99 E98
+4  4 0 ...G.....GM.AA.GM...B.M...B....EE... M99 B98 G98 E99
+4  4 0 ...G.....GM.AABGM...B.M..........EE. M99 B99 G98 E99
+4  4 0 ....M.....M...AAM...BG....BG...EEG.. B98 A98 G99 E99
+4  4 0 ..B.....B....AAG.....GM....GM.EE..M. M97 B99 A99 E98
+4  4 0 ..B.....BGM.AA.GM....GM.......EE.... M99 B99 G99 E98
+4  4 0 ...G.....G..AABG....B.M.....M.EE..M. M97 B99 G98 E98
+4  4 0 ..BG....BG..AA.G......M.....M.EE..M. M97 B99 G98 E98
+4  4 0 ..B.....B...AA.......GM....GM..EEGM. M97 B99 G99 E99
+4  4 0 ..BG....BG..AA.GM.....M.....M.EE.... M98 B99 G98 E98
+4  4 0 ..B.....BGM.AA.GM....GM..........EE. M99 B99 G99 E99
+4  4 0 ..BG....BGM.AA.GM.....M.......EE.... M99 B99 G98 E98
+4  4 0 ..B.....B...AA..M....GM....GM..EEG.. M98 B99 G99 E99
+4  4 0 ..B.....B.M.AA..M....GM....G...EEG.. M99 B99 G99 E99
+4  4 0 ..B.....BGM.AA.GM....GM........EE... M99 B99 G99 E99
+4  4 0 ...G.....GM.AABGM...B.M...........EE M99 B99 G98 E98
+4  4 0 .........G..AABGM...BGM.....M.EE.... M98 B99 G99 E98
+4  4 0 ..B.....B...AA.......GM....GM.EE.GM. M97 B99 G99 E98
+4  4 0 ..B.M...BGM..AAGM....G.........EE... B99 A99 G99 E99
+4  4 0 ...G.....GM.AA.GM...B.M...B......EE. M99 B98 G98 E99
+4  4 0 .........GM.AA.GM...BGM...B....EE... M99 B98 G99 E99
+4  4 0 ..B.....BG..AA.G.....GM.....M.EE..M. M97 B99 G99 E98
+4  4 0 ..BGM...BGM..AAGM................EE. B99 A99 G98 E99
+4  4 0 .........GM.AABGM...BGM........EE... M99 B99 G99 E99
+4  4 0 .........G..AA.G.....GM...B.M.EEB.M. M97 B97 G99 E98
+4  4 0 ..B.M...BGM..AAGM....G........EE.... B99 A99 G99 E98
+4  4 0 ..BG....BGM.AA.GM.....M........EE... M99 B99 G98 E99
+4  4 0 ...G.....G..AA.G....B.M...B.M.EE..M. M97 B98 G98 E98
+4  4 0 ..B.....BG..AA.GM....GM.....M.EE.... M98 B99 G99 E98
+4  4 0 ....M....GM..AAGM....G....B.....BEE. B97 A99 G99 E99
+4  4 0 ...G.....GM.AA.GM...B.M...B.......EE M99 B98 G98 E98
+4  4 0 ..B.M...BGM..AAGM....G...........EE. B99 A99 G99 E99
+4  4 0 ...GM....GM..AAGM.........B.....B.EE B97 A99 G98 E98
+4  4 0 ...G.....G..AABGM...B.M.....M.....EE M98 B99 G98 E98
+4  4 0 ..B.M...B.M..AA.M....G.....G.....GEE B99 A99 G99 E98
+4  4 0 ...G.....G..AABGM...B.M.....M....EE. M98 B99 G98 E99
+4  4 0 ..........M..AAGM...BGM...BG..EE.... M99 B98 A99 E98
+4  4 0 ....M....GM..AAGM...BG....B....EE... B98 A99 G99 E99
+4  4 0 ...G.....GM.AA.GM.....M...B.....B.EE M99 B97 G98 E98
+4  4 0 ...G.....G..AA.GM.....M...B.M...B.EE M98 B97 G98 E98
+4  4 0 ...GM....GM..AAGM...B.....B...EE.... B98 A99 G98 E98
+4  4 0 ....M.....M...AAM....G....BG....BGEE B97 A98 G99 E98
+4  4 0 ............AA..M...BGM...BGM....GEE M98 B98 G99 E98
+4  4 0 ..........M.AA..M....GM...BG....BGEE M99 B97 G99 E98
+4  4 0 ..B.M...B.M...AAM....G.....G.....GEE B99 A98 G99 E98
+4  4 0 ....M.....M...AAM...BG....BG.....GEE B98 A98 G99 E98
+4  4 0 ....M.....M..AA.M...BG....BG.....GEE B98 A99 G99 E98
+4  4 0 ..B.....B...AA..M....GM....GM....GEE M98 B99 G99 E98
+4  4 0 ..B.....B.M.AA..M....GM....G.....GEE M99 B99 G99 E98
+4  4 0 ..B.M...B.M..AA.M....G.....G...EEG.. B99 A99 G99 E99
+4  4 0 ...G.....G..AABG....B.M.....M..EE.M. M97 B99 G98 E99
+4  4 0 ............AAB.M...BGM....GM....GEE M98 B99 G99 E98
+4  4 0 .........G..AA.GM....GM...B.M...B.EE M98 B97 G99 E98
+4  4 0 ....M....GM..AAGM...BG....B...EE.... B98 A99 G99 E98
+4  4 0 .........G..AA.G....BGM...B.M..EE.M. M97 B98 G99 E99
+4  4 0 ....M....GM..AAGM....G....B.....B.EE B97 A99 G99 E98
+4  4 0 ...GM....GM..AAGM...B.....B......EE. B98 A99 G98 E99
+4  4 0 ...G.....G..AABGM...B.M.....M..EE... M98 B99 G98 E99
+4  4 0 .............AAGM....GM...BGM...B.EE M98 B97 A99 E98
+4  4 0 ..........M..AAGM...BGM...BG...EE... M99 B98 A99 E99
+4  4 0 ...G.....GM.AABGM...B.M........EE... M99 B99 G98 E99
+4  4 0 ...G.....GM..AAGM...B.M...B.....EE.. M99 B98 A99 G98
+4  4 0 ..B.....B.M..AAGM....GM....G...EE... M99 B99 A99 E99
+4  4 0 ...G.....G..AA.GM...B.M...B.M.....EE M98 B98 G98 E98
+4  4 0 ..B.....BG...AAGM....GM.....M...EE.. M98 B99 A99 G99
+4  4 0 ..B.....B....AAGM....GM....GM....EE. M98 B99 A99 E99
+4  4 0 ...G.....G..AA.GM...B.M...B.M..EE... M98 B98 G98 E99
+4  4 0 ..B.....B....AAGM....GM....GM.EE.... M98 B99 A99 E98
+4  4 0 ..........M.AA..M...BGM...BG.....GEE M99 B98 G99 E98
+4  4 0 .........G..AA.G....BGM...B.M.EE..M. M97 B98 G99 E98
+4  4 0 ....M.....M..AA.M...BG....BG..EE.G.. B98 A99 G99 E98
+4  4 0 .............AAG.....GM...BGM.EEB.M. M97 B97 A99 E98
+4  4 0 ..B.....BG..AA.GM....GM.....M..EE... M98 B99 G99 E99
+4  4 0 ..B.....B...AA..M....GM....GM.EE.G.. M98 B99 G99 E98
+4  4 0 ..BG....BGM.AA.GM.....M...........EE M99 B99 G98 E98
+4  4 0 ..BG....BGM.AA.GM.....M..........EE. M99 B99 G98 E99
+4  4 0 ..BG....BGM..AAGM.....M.........EE.. M99 B99 A99 G98
+4  4 0 ............AA......BGM...BGM.EE.GM. M97 B98 G99 E98
+4  4 0 ............AA.......GM...BGM.EEBGM. M97 B97 G99 E98
+4  4 0 ..B.....B.M..AAGM....GM....G......EE M99 B99 A99 E98
+4  4 0 ............AAB.....BGM....GM.EE.GM. M97 B99 G99 E98
+4  4 0 ..B.....B.M..AAGM....GM....G.....EE. M99 B99 A99 E99
+4  4 0 .........GM..AAGM...BGM...B.....EE.. M99 B98 A99 G99
+4  4 0 .........G..AABGM...BGM.....M..EE... M98 B99 G99 E99
+4  4 0 ..B.....B.M..AAGM....GM....G..EE.... M99 B99 A99 E98
+4  4 0 ..B.....B....AAGM....GM....GM.....EE M98 B99 A99 E98
+4  4 0 ............AA..M...BGM...BGM.EE.G.. M98 B98 G99 E98
+4  4 0 ..BGM...BGM..AAGM.................EE B99 A99 G98 E98
+4  4 0 .........G..AABGM...BGM.....M.....EE M98 B99 G99 E98
+4  4 0 .........G..AABGM...BGM.....M....EE. M98 B99 G99 E99
+4  4 0 ..B.....B....AAGM....GM....GM..EE... M98 B99 A99 E99
+4  4 0 .........G..AABG....BGM.....M..EE.M. M97 B99 G99 E99
+4  4 0 ...G.....GM.AA.GM...B.M...B...EE.... M99 B98 G98 E98
+4  4 0 .............AAGM...BGM...BGM.EE.... M98 B98 A99 E98
+4  4 0 ..BG....BG...AAGM.....M.....M...EE.. M98 B99 A99 G98
+4  4 0 ..B.....BGM..AAGM....GM.........EE.. M99 B99 A99 G99
+4  4 0 ..........M.AAB.M...BGM....G.....GEE M99 B99 G99 E98
+4  4 0 .............AAGM...BGM...BGM....EE. M98 B98 A99 E99
+4  4 0 ..........M.AA..M...BGM...BG...EEG.. M99 B98 G99 E99
+4  4 0 ..........M.AAB.M...BGM....G...EEG.. M99 B99 G99 E99
+4  4 0 ..BGM...BGM..AAGM..............EE... B99 A99 G98 E99
+4  4 0 ...G.....G..AA.GM.....M...B.M...BEE. M98 B97 G98 E99
+4  4 0 ............AAB.M...BGM....GM.EE.G.. M98 B99 G99 E98
+4  4 0 .........GM.AA.GM....GM...B.....BEE. M99 B97 G99 E99
+4  4 0 .........GM.AA.GM...BGM...B......EE. M99 B98 G99 E99
+4  4 0 ...GM....GM..AAGM.........B.....BEE. B97 A99 G98 E99
+4  4 0 .........GM.AABGM...BGM..........EE. M99 B99 G99 E99
+4  4 0 ............AA..M...BGM...BGM..EEG.. M98 B98 G99 E99
+4  4 0 ..B.....B....AAG.....GM....GM..EE.M. M97 B99 A99 E99
+4  4 0 .............AAGM....GM...BGM...BEE. M98 B97 A99 E99
+4  4 0 ............AAB.M...BGM....GM..EEG.. M98 B99 G99 E99
+4  4 0 ...G.....G..AA.GM...B.M...B.M.EE.... M98 B98 G98 E98
+4  4 0 ...G.....GM.AA.GM.....M...B.....BEE. M99 B97 G98 E99
+4  4 0 ...G.....G..AA.G......M...B.M.EEB.M. M97 B97 G98 E98
+4  4 0 ..BG....BG..AA.GM.....M.....M....EE. M98 B99 G98 E99
+4  4 0 ...G.....GM.AA.GM.....M...B...EEB... M99 B97 G98 E98
+4  4 0 .............AAGM...BGM...BGM..EE... M98 B98 A99 E99
+4  4 0 ..BG....BG...AAG......M.....M...EEM. M97 B99 A99 G98
+4  4 0 ..B.M...B.M..AA.M....G.....G..EE.G.. B99 A99 G99 E98
+4  4 0 ............AAB.....BGM....GM..EEGM. M97 B99 G99 E99
+4  4 0 .........G...AAG....BGM...B.M...EEM. M97 B98 A99 G99
+4  4 0 ...G.....GM.AABGM...B.M.......EE.... M99 B99 G98 E98
+4  4 0 ....M.....M..AA.M....G....BG....BGEE B97 A99 G99 E98
+4  4 0 .........GM.AA.GM....GM...B...EEB... M99 B97 G99 E98
+4  4 0 ....M....GM..AAGM....G....B...EEB... B97 A99 G99 E98
+4  4 0 .........GM.AABGM...BGM.......EE.... M99 B99 G99 E98
+4  4 0 ...GM....GM..AAGM...B.....B.......EE B98 A99 G98 E98
+4  4 0 ...G.....G..AA.GM.....M...B.M.EEB... M98 B97 G98 E98
+4  4 0 ..........M..AAGM....GM...BG....BEE. M99 B97 A99 E99
+4  4 0 ...G.....G..AA.G....B.M...B.M..EE.M. M97 B98 G98 E99
+4  4 0 .........G...AAGM...BGM...B.M...EE.. M98 B98 A99 G99
+4  4 0 .........G..AA.GM...BGM...B.M.EE.... M98 B98 G99 E98
+4  4 0 ..BG....BG..AA.G......M.....M..EE.M. M97 B99 G98 E99
+4  4 0 .........GM.AA.GM...BGM...B.......EE M99 B98 G99 E98
+4  4 0 .........G..AA.GM...BGM...B.M..EE... M98 B98 G99 E99
+4  4 0 ....M....GM..AAGM...BG....B.......EE B98 A99 G99 E98
+4  4 0 ..BGM...BGM..AAGM.............EE.... B99 A99 G98 E98
+4  4 0 ............AA......BGM...BGM..EEGM. M97 B98 G99 E99
+4  4 0 ....M....GM..AAGM...BG....B......EE. B98 A99 G99 E99
+4  4 0 .........G..AA.GM...BGM...B.M....EE. M98 B98 G99 E99
+4  4 0 ...G.....G...AAG....B.M...B.M...EEM. M97 B98 A99 G98
+4  4 0 ....M.....M..AA.M...BG....BG...EEG.. B98 A99 G99 E99
+4  4 0 ..........M.AA..M....GM...BG..EEBG.. M99 B97 G99 E98
+4  4 0 ............AA..M....GM...BGM.EEBG.. M98 B97 G99 E98
+4  4 0 ..B.....B.M.AA..M....GM....G..EE.G.. M99 B99 G99 E98
+4  4 0 ...G.....G..AABGM...B.M.....M.EE.... M98 B99 G98 E98
+4  4 0 ..........M.AA..M...BGM...BG..EE.G.. M99 B98 G99 E98
+4  4 0 ..B.....BG..AA.G.....GM.....M..EE.M. M97 B99 G99 E99
+4  4 0 ..B.....BG..AA.GM....GM.....M.....EE M98 B99 G99 E98
+4  4 0 ..B.M...B.M...AAM....G.....G...EEG.. B99 A98 G99 E99
+4  4 0 .........G..AA.GM....GM...B.M.EEB... M98 B97 G99 E98
+4  4 0 .........GM.AA.GM...BGM...B...EE.... M99 B98 G99 E98
+4  4 0 .........GM.AA.GM....GM...B.....B.EE M99 B97 G99 E98
+4  4 0 ............AA..M....GM...BGM...BGEE M98 B97 G99 E98
+4  4 0 .........GM.AABGM...BGM...........EE M99 B99 G99 E98
+4  4 0 ....M.....M..AA.M....G....BG..EEBG.. B97 A99 G99 E98
+4  4 0 ..........M..AAGM....GM...BG..EEB... M99 B97 A99 E98
+4  4 0 ..........M..AAGM...BGM...BG.....EE. M99 B98 A99 E99
+4  4 0 ..BG....BG..AA.GM.....M.....M.....EE M98 B99 G98 E98
+4  4 0 .........G..AA.GM....GM...B.M...BEE. M98 B97 G99 E99
+4  4 0 .............AAG....BGM...BGM.EE..M. M97 B98 A99 E98
+4  4 0 ..BG....BG..AA.GM.....M.....M..EE... M98 B99 G98 E99
+4  4 0 ..........M..AAGM....GM...BG....B.EE M99 B97 A99 E98
+4  4 0 ..B.....BG..AA.GM....GM.....M....EE. M98 B99 G99 E99
+4  4 0 ..B.M...B.M...AAM....G.....G..EE.G.. B99 A98 G99 E98
+4  4 0 ..........M.AAB.M...BGM....G..EE.G.. M99 B99 G99 E98
+4  4 0 ...GM....GM..AAGM...B.....B....EE... B98 A99 G98 E99
+4  4 0 ....M.....M...AAM...BG....BG..EE.G.. B98 A98 G99 E98
+4  4 0 .............AAGM...BGM...BGM.....EE M98 B98 A99 E98
+4  4 0 ...G.....G...AAGM...B.M...B.M...EE.. M98 B98 A99 G98
+4  4 0 ....M.....M...AAM....G....BG..EEBG.. B97 A98 G99 E98
+4  4 0 .............AAG....BGM...BGM..EE.M. M97 B98 A99 E99
+4  4 0 ...G.....G..AA.GM...B.M...B.M....EE. M98 B98 G98 E99
+4  4 0 .........G..AA.GM...BGM...B.M.....EE M98 B98 G99 E98
+4  4 0 .............AAGM....GM...BGM.EEB... M98 B97 A99 E98
+4  4 0 ..B.....BG...AAG.....GM.....M...EEM. M97 B99 A99 G99
+4  4 0 ..........M..AAGM...BGM...BG......EE M99 B98 A99 E98
+5  5 0 ..B.....BGM..AAGM....GM...........EE M99 B99 A99 G99 E98
+5  5 0 ...G.....G...AAG......M...B.M.EEB.M. M97 B97 A99 G98 E98
+5  5 0 ..............AA....BGM...BGM..EEGM. M97 B98 A98 G99 E99
+5  5 0 ..BG....BGM..AAGM.....M.......EE.... M99 B99 A99 G98 E98
+5  5 0 ...G.....G...AAG....B.M...B.M.EE..M. M97 B98 A99 G98 E98
+5  5 0 ..............AAM....GM...BGM...BGEE M98 B97 A98 G99 E98
+5  5 0 ...G.....GM..AAGM...B.M...B...EE.... M99 B98 A99 G98 E98
+5  5 0 ...G.....G...AAGM...B.M...B.M.EE.... M98 B98 A99 G98 E98
+5  5 0 .........GM..AAGM...BGM...B...EE.... M99 B98 A99 G99 E98
+5  5 0 ..B.....B.....AA.....GM....GM.EE.GM. M97 B99 A98 G99 E98
+5  5 0 ..B.....B.....AAM....GM....GM....GEE M98 B99 A98 G99 E98
+5  5 0 .............AA.M...BGM...BGM....GEE M98 B98 A99 G99 E98
+5  5 0 ..B.....B.M...AAM....GM....G.....GEE M99 B99 A98 G99 E98
+5  5 0 ...G.....G...AAGM...B.M...B.M....EE. M98 B98 A99 G98 E99
+5  5 0 .........GM..AAGM....GM...B.....BEE. M99 B97 A99 G99 E99
+5  5 0 .........GM..AAGM....GM...B.....B.EE M99 B97 A99 G99 E98
+5  5 0 .........G...AAGM...BGM...B.M.EE.... M98 B98 A99 G99 E98
+5  5 0 ...G.....G...AAGM.....M...B.M...B.EE M98 B97 A99 G98 E98
+5  5 0 ..B.....B.....AA.....GM....GM..EEGM. M97 B99 A98 G99 E99
+5  5 0 ..........M...AAM...BGM...BG...EEG.. M99 B98 A98 G99 E99
+5  5 0 ..............AAM...BGM...BGM..EEG.. M98 B98 A98 G99 E99

@@ -1,0 +1,15 @@
+no solution--------------------------------------------------------------------------------
+Initial board configuration: HHHH..CCIII.MMAAKL.JJ.KKEEE.BB..KKHH
+
+HHHH..
+CCIII.
+MMAAKL
+.JJ.KK
+EEE.BB
+..KKHH
+Car fuel available: Car fuel available: H:100, C:100, I:100, M:100, A:100, K:100, L:100, J:100, E:100, B:100, 
+
+no solution found
+
+Runtime:0.036395seconds
+

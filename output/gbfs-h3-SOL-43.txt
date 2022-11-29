@@ -1,0 +1,43 @@
+--------------------------------------------------------------------------------
+Initial board configuration: ....M...B.M.AABGM....G.....G....EE..
+
+....M.
+..B.M.
+AABGM.
+...G..
+...G..
+..EE..
+Car fuel available: Car fuel available: M:100, B:100, A:100, G:100, E:100, 
+
+Runtime:0.092917seconds
+
+Search path length:154
+
+Solution path length:16moves
+
+Solution path: G up    1;  E left  2;  B down  1;  E right 3;  B down  2;  A right 1;  E right 1;  B up    1;  E left  3;  A left  1;  G down  2;  E left  1;  A right 2;  M down  3;  E right 1;  A right 2; 
+
+G up    1       99 ....M...BGM.AABGM....G..........EE..  G99
+E left  2       98 ....M...BGM.AABGM....G........EE....  G99 E98
+B down  1       99 ....M....GM.AABGM...BG........EE....  B99 G99 E98
+E right 3       95 ....M....GM.AABGM...BG...........EE.  B99 G99 E95
+B down  2       97 ....M....GM.AA.GM....G....B.....BEE.  B97 G99 E95
+A right 1       99 ....M....GM..AAGM....G....B.....BEE.  B97 A99 G99 E95
+E right 1       94 ....M....GM..AAGM....G....B.....B.EE  B97 A99 G99 E94
+B up    1       96 ....M....GM..AAGM...BG....B.......EE  B96 A99 G99 E94
+E left  3       91 ....M....GM..AAGM...BG....B....EE...  B96 A99 G99 E91
+A left  1       98 ....M....GM.AA.GM...BG....B....EE...  B96 A98 G99 E91
+G down  2       97 ....M.....M.AA..M...BG....BG...EEG..  B96 A98 G97 E91
+E left  1       90 ....M.....M.AA..M...BG....BG..EE.G..  B96 A98 G97 E90
+A right 2       96 ....M.....M...AAM...BG....BG..EE.G..  B96 A96 G97 E90
+M down  3       97 ..............AA....BGM...BGM.EE.GM.  M97 B96 A96 G97 E90
+E right 1       89 ..............AA....BGM...BGM..EEGM.  M97 B96 A96 G97 E89
+A right 2       94 ................AA..BGM...BGM..EEGM.  M97 B96 A94 G97 E89
+
+
+......
+......
+....AA
+..BGM.
+..BGM.
+.EEGM.

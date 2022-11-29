@@ -1,0 +1,42 @@
+--------------------------------------------------------------------------------
+Initial board configuration: BBB..MCCDD.M..AAKL.MJ.KLEEJ.GG..JHHH
+
+BBB..M
+CCDD.M
+..AAKL
+.MJ.KL
+EEJ.GG
+..JHHH
+Car fuel available: Car fuel available: B:100, M:100, C:100, D:100, A:100, K:100, L:100, J:100, E:100, G:100, H:100, 
+
+Runtime:0.059367seconds
+
+Search path length:103
+
+Solution path length:15moves
+
+Solution path: B right 1;  G left  1;  L down  1;  K up    2;  A right 1;  L up    1;  G right 1;  J up    1;  H left  3;  G left  1;  H right 2;  L down  2;  H left  1;  L up    1;  A right 1; 
+
+B right 1       99 .BBB.MCCDD.M..AAKL.MJ.KLEEJ.GG..JHHH  B99
+G left  1       99 .BBB.MCCDD.M..AAKL.MJ.KLEEJGG...JHHH  B99 G99
+L down  1       99 .BBB.MCCDD.M..AAK..MJ.KLEEJGGL..JHHH  B99 L99 G99
+K up    2       98 .BBBKMCCDDKM..AA...MJ..LEEJGGL..JHHH  B99 K98 L99 G99
+A right 1       99 .BBBKMCCDDKM...AA..MJ..LEEJGGL..JHHH  B99 A99 K98 L99 G99
+L up    1       98 .BBBKMCCDDKM...AAL.MJ..LEEJGG...JHHH  B99 A99 K98 L98 G99
+G right 1       98 .BBBKMCCDDKM...AAL.MJ..LEEJ.GG..JHHH  B99 A99 K98 L98 G98
+J up    1       99 .BBBKMCCDDKM..JAAL.MJ..LEEJ.GG...HHH  B99 A99 K98 L98 J99 G98
+H left  3       97 .BBBKMCCDDKM..JAAL.MJ..LEEJ.GGHHH...  B99 A99 K98 L98 J99 G98 H97
+G left  1       97 .BBBKMCCDDKM..JAAL.MJ..LEEJGG.HHH...  B99 A99 K98 L98 J99 G97 H97
+H right 2       95 .BBBKMCCDDKM..JAAL.MJ..LEEJGG...HHH.  B99 A99 K98 L98 J99 G97 H95
+L down  2       96 .BBBKMCCDDKM..JAA..MJ...EEJGGL..HHHL  B99 A99 K98 L96 J99 G97 H95
+H left  1       94 .BBBKMCCDDKM..JAA..MJ...EEJGGL.HHH.L  B99 A99 K98 L96 J99 G97 H94
+L up    1       95 .BBBKMCCDDKM..JAA..MJ..LEEJGGL.HHH..  B99 A99 K98 L95 J99 G97 H94
+A right 1       98 .BBBKMCCDDKM..J.AA.MJ..LEEJGGL.HHH..  B99 A98 K98 L95 J99 G97 H94
+
+
+.BBBKM
+CCDDKM
+..J.AA
+.MJ..L
+EEJGGL
+.HHH..

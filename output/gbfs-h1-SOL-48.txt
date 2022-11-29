@@ -1,0 +1,92 @@
+--------------------------------------------------------------------------------
+Initial board configuration: ...EEEDBB...DAACCND..GGN...MMF.HH..F
+
+...EEE
+DBB...
+DAACCN
+D..GGN
+...MMF
+.HH..F
+Car fuel available: Car fuel available: E:100, D:100, B:100, A:100, C:100, N:100, G:100, M:100, F:100, H:100, 
+
+Runtime:0.76715seconds
+
+Search path length:733
+
+Solution path length:65moves
+
+Solution path: E left  1;  H right 1;  M left  3;  H right 1;  M right 2;  G left  2;  H left  1;  M left  1;  G right 1;  H right 1;  M right 2;  N up    2;  H left  1;  F up    2;  H left  2;  M left  1;  H right 3;  M right 2;  G right 1;  H left  3;  M left  3;  H right 2;  M left  1;  H left  1;  F down  2;  M right 2;  H left  1;  G right 1;  H right 3;  M left  2;  H left  1;  M right 1;  C right 1;  H left  2;  M left  1;  H right 1;  M right 3;  H right 2;  G left  3;  H left  1;  F up    2;  H left  1;  M right 1;  H right 3;  M left  4;  G right 2;  H left  3;  M right 2;  H right 1;  G left  1;  H right 2;  F down  1;  H left  4;  M left  1;  H right 3;  G right 1;  H left  1;  M left  1;  F down  1;  H right 1;  M right 2;  G left  1;  H left  2;  G left  1;  A right 3; 
+
+E left  1       99 ..EEE.DBB...DAACCND..GGN...MMF.HH..F  E99
+H right 1       99 ..EEE.DBB...DAACCND..GGN...MMF..HH.F  E99 H99
+M left  3       97 ..EEE.DBB...DAACCND..GGNMM...F..HH.F  E99 M97 H99
+H right 1       98 ..EEE.DBB...DAACCND..GGNMM...F...HHF  E99 M97 H98
+M right 2       95 ..EEE.DBB...DAACCND..GGN..MM.F...HHF  E99 M95 H98
+G left  2       98 ..EEE.DBB...DAACCNDGG..N..MM.F...HHF  E99 G98 M95 H98
+H left  1       97 ..EEE.DBB...DAACCNDGG..N..MM.F..HH.F  E99 G98 M95 H97
+M left  1       94 ..EEE.DBB...DAACCNDGG..N.MM..F..HH.F  E99 G98 M94 H97
+G right 1       97 ..EEE.DBB...DAACCND.GG.N.MM..F..HH.F  E99 G97 M94 H97
+H right 1       96 ..EEE.DBB...DAACCND.GG.N.MM..F...HHF  E99 G97 M94 H96
+M right 2       92 ..EEE.DBB...DAACCND.GG.N...MMF...HHF  E99 G97 M92 H96
+N up    2       98 ..EEENDBB..NDAACC.D.GG.....MMF...HHF  E99 N98 G97 M92 H96
+H left  1       95 ..EEENDBB..NDAACC.D.GG.....MMF..HH.F  E99 N98 G97 M92 H95
+F up    2       98 ..EEENDBB..NDAACCFD.GG.F...MM...HH..  E99 N98 G97 M92 F98 H95
+H left  2       93 ..EEENDBB..NDAACCFD.GG.F...MM.HH....  E99 N98 G97 M92 F98 H93
+M left  1       91 ..EEENDBB..NDAACCFD.GG.F..MM..HH....  E99 N98 G97 M91 F98 H93
+H right 3       90 ..EEENDBB..NDAACCFD.GG.F..MM.....HH.  E99 N98 G97 M91 F98 H90
+M right 2       89 ..EEENDBB..NDAACCFD.GG.F....MM...HH.  E99 N98 G97 M89 F98 H90
+G right 1       96 ..EEENDBB..NDAACCFD..GGF....MM...HH.  E99 N98 G96 M89 F98 H90
+H left  3       87 ..EEENDBB..NDAACCFD..GGF....MMHH....  E99 N98 G96 M89 F98 H87
+M left  3       86 ..EEENDBB..NDAACCFD..GGF.MM...HH....  E99 N98 G96 M86 F98 H87
+H right 2       85 ..EEENDBB..NDAACCFD..GGF.MM.....HH..  E99 N98 G96 M86 F98 H85
+M left  1       85 ..EEENDBB..NDAACCFD..GGFMM......HH..  E99 N98 G96 M85 F98 H85
+H left  1       84 ..EEENDBB..NDAACCFD..GGFMM.....HH...  E99 N98 G96 M85 F98 H84
+F down  2       96 ..EEENDBB..NDAACC.D..GG.MM...F.HH..F  E99 N98 G96 M85 F96 H84
+M right 2       83 ..EEENDBB..NDAACC.D..GG...MM.F.HH..F  E99 N98 G96 M83 F96 H84
+H left  1       83 ..EEENDBB..NDAACC.D..GG...MM.FHH...F  E99 N98 G96 M83 F96 H83
+G right 1       95 ..EEENDBB..NDAACC.D...GG..MM.FHH...F  E99 N98 G95 M83 F96 H83
+H right 3       80 ..EEENDBB..NDAACC.D...GG..MM.F...HHF  E99 N98 G95 M83 F96 H80
+M left  2       81 ..EEENDBB..NDAACC.D...GGMM...F...HHF  E99 N98 G95 M81 F96 H80
+H left  1       79 ..EEENDBB..NDAACC.D...GGMM...F..HH.F  E99 N98 G95 M81 F96 H79
+M right 1       80 ..EEENDBB..NDAACC.D...GG.MM..F..HH.F  E99 N98 G95 M80 F96 H79
+C right 1       99 ..EEENDBB..NDAA...D...GG.MM..F..HH.F  E99 C99 N98 G95 M80 F96 H79
+H left  2       77 ..EEENDBB..NDAA...D...GG.MM..FHH...F  E99 C99 N98 G95 M80 F96 H77
+M left  1       79 ..EEENDBB..NDAA...D...GGMM...FHH...F  E99 C99 N98 G95 M79 F96 H77
+H right 1       76 ..EEENDBB..NDAA...D...GGMM...F.HH..F  E99 C99 N98 G95 M79 F96 H76
+M right 3       76 ..EEENDBB..NDAA...D...GG...MMF.HH..F  E99 C99 N98 G95 M76 F96 H76
+H right 2       74 ..EEENDBB..NDAA...D...GG...MMF...HHF  E99 C99 N98 G95 M76 F96 H74
+G left  3       92 ..EEENDBB..NDAA...DGG......MMF...HHF  E99 C99 N98 G92 M76 F96 H74
+H left  1       73 ..EEENDBB..NDAA...DGG......MMF..HH.F  E99 C99 N98 G92 M76 F96 H73
+F up    2       94 ..EEENDBB..NDAA..FDGG..F...MM...HH..  E99 C99 N98 G92 M76 F94 H73
+H left  1       72 ..EEENDBB..NDAA..FDGG..F...MM..HH...  E99 C99 N98 G92 M76 F94 H72
+M right 1       75 ..EEENDBB..NDAA..FDGG..F....MM.HH...  E99 C99 N98 G92 M75 F94 H72
+H right 3       69 ..EEENDBB..NDAA..FDGG..F....MM....HH  E99 C99 N98 G92 M75 F94 H69
+M left  4       71 ..EEENDBB..NDAA..FDGG..FMM........HH  E99 C99 N98 G92 M71 F94 H69
+G right 2       90 ..EEENDBB..NDAA..FD..GGFMM........HH  E99 C99 N98 G90 M71 F94 H69
+H left  3       66 ..EEENDBB..NDAA..FD..GGFMM.....HH...  E99 C99 N98 G90 M71 F94 H66
+M right 2       69 ..EEENDBB..NDAA..FD..GGF..MM...HH...  E99 C99 N98 G90 M69 F94 H66
+H right 1       65 ..EEENDBB..NDAA..FD..GGF..MM....HH..  E99 C99 N98 G90 M69 F94 H65
+G left  1       89 ..EEENDBB..NDAA..FD.GG.F..MM....HH..  E99 C99 N98 G89 M69 F94 H65
+H right 2       63 ..EEENDBB..NDAA..FD.GG.F..MM......HH  E99 C99 N98 G89 M69 F94 H63
+F down  1       93 ..EEENDBB..NDAA...D.GG.F..MM.F....HH  E99 C99 N98 G89 M69 F93 H63
+H left  4       59 ..EEENDBB..NDAA...D.GG.F..MM.FHH....  E99 C99 N98 G89 M69 F93 H59
+M left  1       68 ..EEENDBB..NDAA...D.GG.F.MM..FHH....  E99 C99 N98 G89 M68 F93 H59
+H right 3       56 ..EEENDBB..NDAA...D.GG.F.MM..F...HH.  E99 C99 N98 G89 M68 F93 H56
+G right 1       88 ..EEENDBB..NDAA...D..GGF.MM..F...HH.  E99 C99 N98 G88 M68 F93 H56
+H left  1       55 ..EEENDBB..NDAA...D..GGF.MM..F..HH..  E99 C99 N98 G88 M68 F93 H55
+M left  1       67 ..EEENDBB..NDAA...D..GGFMM...F..HH..  E99 C99 N98 G88 M67 F93 H55
+F down  1       92 ..EEENDBB..NDAA...D..GG.MM...F..HH.F  E99 C99 N98 G88 M67 F92 H55
+H right 1       54 ..EEENDBB..NDAA...D..GG.MM...F...HHF  E99 C99 N98 G88 M67 F92 H54
+M right 2       65 ..EEENDBB..NDAA...D..GG...MM.F...HHF  E99 C99 N98 G88 M65 F92 H54
+G left  1       87 ..EEENDBB..NDAA...D.GG....MM.F...HHF  E99 C99 N98 G87 M65 F92 H54
+H left  2       52 ..EEENDBB..NDAA...D.GG....MM.F.HH..F  E99 C99 N98 G87 M65 F92 H52
+G left  1       86 ..EEENDBB..NDAA...DGG.....MM.F.HH..F  E99 C99 N98 G86 M65 F92 H52
+A right 3       97 ..EEENDBB..ND...AADGG.....MM.F.HH..F  E99 A97 C99 N98 G86 M65 F92 H52
+
+
+..EEEN
+DBB..N
+D...AA
+DGG...
+..MM.F
+.HH..F
